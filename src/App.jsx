@@ -1,110 +1,167 @@
-import React, { useState, useEffect } from 'react';
-import Header from './components/Header';
-import Sidebar from './components/Sidebar';
-import CricketDashboard from './components/CricketDashboard';
-import SignupModal from './components/SignupModal';
-import LoginModal from './components/LoginModal';
-import FootballDashboard from './components/FootballDashboard';
-import TennisDashboard from './components/TennisDashboard';
-import CasinoProviders from './components/CasinoProviders';
-import UpcomingEvents from './components/UpcomingEvents';
+import React from "react";
+import { Routes, Route } from "react-router-dom";
+
+import MainLayout from "./layouts/MainLayout";
+
+import CricketDashboard from "./components/CricketDashboard";
+import FootballDashboard from "./components/FootballDashboard";
+import TennisDashboard from "./components/TennisDashboard";
+import CasinoProviders from "./components/CasinoProviders";
+import UpcomingEvents from "./components/UpcomingEvents";
+import Footer from "./components/Footer";
+
+import LoginPage from "./pages/LoginPage";
+import RegisterPage from "./pages/RegisterPage";
+
+// SPORT PAGES
+import CricketPage from "./pages/CricketPage";
+import FootballPage from "./pages/FootballPage";
+import TennisPage from "./pages/TennisPage";
+
+// ALL PAGES
+import AboutUs from "./pages/about-us/page";
+import ResponsibleGaming from "./pages/responsible-gaming/page";
+import CustomerCare from "./pages/customer-care/page";
+import Terms from "./pages/terms/page";
+import PrivacyPolicy from "./pages/privacy/page";
+import Blogs from "./pages/blogs/page";
+import Categories from "./pages/categories/page";
 
 function App() {
-  const [isSignupOpen, setIsSignupOpen] = useState(false);
-  const [isLoginOpen, setIsLoginOpen] = useState(false);
-  const [isMobileSidebarOpen, setIsMobileSidebarOpen] = useState(false);
-  const [isMobile, setIsMobile] = useState(false);
-
-  // Check if mobile view
-  useEffect(() => {
-    const checkMobile = () => {
-      setIsMobile(window.innerWidth < 640);
-    };
-    checkMobile();
-    window.addEventListener('resize', checkMobile);
-    return () => window.removeEventListener('resize', checkMobile);
-  }, []);
-
-  // Close sidebar when resizing to desktop
-  useEffect(() => {
-    if (!isMobile) {
-      setIsMobileSidebarOpen(false);
-    }
-  }, [isMobile]);
-
   return (
-    <div className="h-screen bg-[#eef2f5] flex flex-col font-sans overflow-hidden relative">
-      
-      {/* Header with mobile menu button */}
-      <div className="relative">
-        {/* Mobile Menu Button */}
-        {isMobile && (
-          <button 
-            onClick={() => setIsMobileSidebarOpen(true)}
-            className="fixed left-4 top-4 z-30 bg-white p-2 rounded-lg shadow-md sm:hidden"
-          >
-            <svg className="w-6 h-6 text-[#4a121a]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
-            </svg>
-          </button>
-        )}
-        
-        <div onClick={(e) => {
-          const text = e.target.textContent || '';
-          if (text.includes('SIGNUP')) setIsSignupOpen(true);
-          if (text.includes('LOGIN')) setIsLoginOpen(true);
-        }}>
-          <Header />
-        </div>
-      </div>
-      
-      {/* Structural main column flex core */}
-      <div className="flex flex-1 w-full max-w-[100vw] overflow-hidden">
-        
-        {/* Left Category Navigation Menu - responsive sidebar */}
-        <Sidebar 
-          isMobileOpen={isMobileSidebarOpen}
-          onClose={() => setIsMobileSidebarOpen(false)}
-        />
-        
-        {/* Right Dashboard Sheet */}
-        <main className={`flex-1 p-2 sm:p-3 overflow-x-hidden overflow-y-auto h-full transition-all duration-300
-          ${isMobile && isMobileSidebarOpen ? 'blur-sm' : ''}`}
-          onClick={() => {
-            if (isMobile && isMobileSidebarOpen) {
-              setIsMobileSidebarOpen(false);
-            }
-          }}
-        >
-          <div className="max-w-7xl mx-auto">
-            <CricketDashboard />
-            <FootballDashboard />
-            <TennisDashboard/>
-            <CasinoProviders />
-            <UpcomingEvents />
-          </div>
-        </main>
-      </div>
+    <Routes>
 
-      {/* Modals */}
-      <SignupModal 
-        isOpen={isSignupOpen} 
-        onClose={() => setIsSignupOpen(false)} 
-        switchToLogin={() => {
-          setIsSignupOpen(false);
-          setIsLoginOpen(true);
-        }}
+      {/* HOME PAGE */}
+      <Route
+        path="/"
+        element={
+          <MainLayout>
+            <div className="max-w-7xl mx-auto p-4 space-y-4">
+              <CricketDashboard />
+              <FootballDashboard />
+              <TennisDashboard />
+              <CasinoProviders />
+              <UpcomingEvents />
+              <Footer />
+            </div>
+          </MainLayout>
+        }
       />
 
-      <LoginModal 
-        isOpen={isLoginOpen} 
-        onClose={() => setIsLoginOpen(false)} 
-        switchToSignup={() => {
-          setIsLoginOpen(false);
-          setIsSignupOpen(true);
-        }}
+      {/* LOGIN */}
+      <Route path="/login" element={<LoginPage />} />
+
+      {/* REGISTER */}
+      <Route path="/signup" element={<RegisterPage />} />
+
+      {/* CRICKET PAGE */}
+      <Route
+        path="/cricket-page"
+        element={
+          <MainLayout>
+            <CricketPage />
+          </MainLayout>
+        }
       />
-    </div>
+
+      {/* FOOTBALL PAGE */}
+      <Route
+        path="/football-page"
+        element={
+          <MainLayout>
+            <FootballPage />
+          </MainLayout>
+        }
+      />
+
+      {/* TENNIS PAGE */}
+      <Route
+        path="/tennis-page"
+        element={
+          <MainLayout>
+            <TennisPage />
+          </MainLayout>
+        }
+      />
+
+      {/* ABOUT US */}
+      <Route
+        path="/about-us"
+        element={
+          <MainLayout>
+            <AboutUs />
+            <Footer />
+          </MainLayout>
+        }
+      />
+
+      {/* RESPONSIBLE GAMING */}
+      <Route
+        path="/responsible-gaming"
+        element={
+          <MainLayout>
+            <ResponsibleGaming />
+            <Footer />
+          </MainLayout>
+        }
+      />
+
+      {/* CUSTOMER CARE */}
+      <Route
+        path="/customer-care"
+        element={
+          <MainLayout>
+            <CustomerCare />
+            <Footer />
+          </MainLayout>
+        }
+      />
+
+      {/* TERMS */}
+      <Route
+        path="/terms"
+        element={
+          <MainLayout>
+            <Terms />
+            <Footer />
+          </MainLayout>
+        }
+      />
+
+      {/* PRIVACY */}
+      <Route
+        path="/privacy"
+        element={
+          <MainLayout>
+            <PrivacyPolicy />
+            <Footer />
+          </MainLayout>
+        }
+      />
+
+      {/* BLOGS */}
+      <Route
+        path="/blogs"
+        element={
+          <MainLayout>
+            <Blogs />
+            <Footer />
+          </MainLayout>
+        }
+      />
+
+      {/* CATEGORIES */}
+      <Route
+        path="/categories"
+        element={
+          <MainLayout>
+            <Categories />
+            <Footer />
+          </MainLayout>
+        }
+      />
+
+    </Routes>
   );
 }
 
