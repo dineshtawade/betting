@@ -109,7 +109,7 @@ const navItems = [
 
         {/* AUTH BUTTONS */}
         <div className="flex items-center gap-2 shrink-0">
-          <button onClick={() => navigate('/register')} className="bg-[#2a2a2a] text-white text-[10px] md:text-xs font-bold px-3 py-1.5 md:px-4 rounded uppercase">SIGNUP</button>
+          <button onClick={() => navigate('/signup')} className="bg-[#2a2a2a] text-white text-[10px] md:text-xs font-bold px-3 py-1.5 md:px-4 rounded uppercase">SIGNUP</button>
           <button onClick={() => navigate('/login')} className="bg-[#2a2a2a] text-white text-[10px] md:text-xs font-bold px-3 py-1.5 md:px-5 rounded uppercase">LOGIN</button>
         </div>
       </div>

@@ -3,9 +3,24 @@ import { useNavigate } from 'react-router-dom';
 
 export default function RegisterPage() {
   const navigate = useNavigate();
+
+  const handleBack = () => {
+    if (window.history.state?.idx > 0) {
+      navigate(-1);
+    } else {
+      navigate('/');
+    }
+  };
+
   return (
     <div className="min-h-screen flex items-center justify-center bg-gray-900 text-white">
       <div className="w-full max-w-md bg-[#222222] p-8 rounded-lg shadow-xl">
+        <button
+          onClick={handleBack}
+          className="mb-4 text-sm text-gray-300 hover:text-white underline"
+        >
+          ← Back
+        </button>
         <h2 className="text-2xl font-bold mb-6 text-center text-[#cca04c]">REGISTER</h2>
         <form className="space-y-4">
           <input type="text" placeholder="Username" className="w-full bg-[#2a2a2a] p-3 border rounded" />

@@ -53,6 +53,7 @@ function App() {
 
       {/* REGISTER */}
       <Route path="/signup" element={<RegisterPage />} />
+      <Route path="/register" element={<RegisterPage />} />
 
       {/* CRICKET PAGE */}
       <Route
