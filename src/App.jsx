@@ -17,6 +17,33 @@ import RegisterPage from "./pages/RegisterPage";
 import CricketPage from "./pages/CricketPage";
 import FootballPage from "./pages/FootballPage";
 import TennisPage from "./pages/TennisPage";
+import InPlayPage from "./pages/in-play/page";
+import Fantasy11Page from "./pages/Fantasy11Page";
+import CasinoPage from "./pages/CasinoPage";
+import SportsbookPage from "./pages/SportsbookPage";
+import MmaPage from "./pages/MmaPage";
+import GolfPage from "./pages/GolfPage";
+import EsportsPage from "./pages/EsportsPage";
+import KabaddiPage from "./pages/KabaddiPage";
+import BasketballPage from "./pages/BasketballPage";
+import BaseballPage from "./pages/BaseballPage";
+import VolleyballPage from "./pages/VolleyballPage";
+import BadmintonPage from "./pages/BadmintonPage";
+import HockeyPage from "./pages/HockeyPage";
+import RugbyPage from "./pages/RugbyPage";
+import BoxingPage from "./pages/BoxingPage";
+import HorseRacingPage from "./pages/HorseRacingPage";
+import GreyhoundPage from "./pages/GreyhoundPage";
+import DartsPage from "./pages/DartsPage";
+import SnookerPage from "./pages/SnookerPage";
+import CyclingPage from "./pages/CyclingPage";
+import HandballPage from "./pages/HandballPage";
+import FutsalPage from "./pages/FutsalPage";
+import MotorsportPage from "./pages/MotorsportPage";
+import Formula1Page from "./pages/Formula1Page";
+import PoliticsPage from "./pages/PoliticsPage";
+import CockFightPage from "./pages/CockFightPage";
+import BinaryPage from "./pages/BinaryPage";
 
 // ALL PAGES
 import AboutUs from "./pages/about-us/page";
@@ -89,6 +116,8 @@ function App() {
           }
         />
 
+       
+
         {/* FOOTBALL PAGE */}
         <Route
           path="/football-page"
@@ -105,6 +134,276 @@ function App() {
           element={
             <MainLayout>
               <TennisPage />
+            </MainLayout>
+          }
+        />
+
+        {/* IN-PLAY PAGE */}
+        <Route
+          path="/in-play"
+          element={
+            <MainLayout>
+              <InPlayPage />
+            </MainLayout>
+          }
+        />
+
+        {/* FANTASY 11 */}
+        <Route
+          path="/fantasy-11"
+          element={
+            <MainLayout>
+              <Fantasy11Page />
+            </MainLayout>
+          }
+        />
+
+        {/* CASINO */}
+        <Route
+          path="/casino"
+          element={
+            <MainLayout>
+              <CasinoPage />
+            </MainLayout>
+          }
+        />
+
+        {/* SPORTSBOOK */}
+        <Route
+          path="/sportsbook"
+          element={
+            <MainLayout>
+              <SportsbookPage />
+            </MainLayout>
+          }
+        />
+
+        {/* MMA */}
+        <Route
+          path="/mma"
+          element={
+            <MainLayout>
+              <MmaPage />
+            </MainLayout>
+          }
+        />
+
+        {/* GOLF */}
+        <Route
+          path="/golf"
+          element={
+            <MainLayout>
+              <GolfPage />
+            </MainLayout>
+          }
+        />
+
+        {/* ESPORTS */}
+        <Route
+          path="/esports"
+          element={
+            <MainLayout>
+              <EsportsPage />
+            </MainLayout>
+          }
+        />
+
+        {/* KABADDI */}
+        <Route
+          path="/kabaddi"
+          element={
+            <MainLayout>
+              <KabaddiPage />
+            </MainLayout>
+          }
+        />
+
+        {/* BASKETBALL */}
+        <Route
+          path="/basketball"
+          element={
+            <MainLayout>
+              <BasketballPage />
+            </MainLayout>
+          }
+        />
+
+        {/* BASEBALL */}
+        <Route
+          path="/baseball"
+          element={
+            <MainLayout>
+              <BaseballPage />
+            </MainLayout>
+          }
+        />
+
+        {/* VOLLEYBALL */}
+        <Route
+          path="/volleyball"
+          element={
+            <MainLayout>
+              <VolleyballPage />
+            </MainLayout>
+          }
+        />
+
+        {/* BADMINTON */}
+        <Route
+          path="/badminton"
+          element={
+            <MainLayout>
+              <BadmintonPage />
+            </MainLayout>
+          }
+        />
+
+        {/* HOCKEY */}
+        <Route
+          path="/hockey"
+          element={
+            <MainLayout>
+              <HockeyPage />
+            </MainLayout>
+          }
+        />
+
+        {/* RUGBY */}
+        <Route
+          path="/rugby"
+          element={
+            <MainLayout>
+              <RugbyPage />
+            </MainLayout>
+          }
+        />
+
+        {/* BOXING */}
+        <Route
+          path="/boxing"
+          element={
+            <MainLayout>
+              <BoxingPage />
+            </MainLayout>
+          }
+        />
+
+        {/* HORSE RACING */}
+        <Route
+          path="/horse-racing"
+          element={
+            <MainLayout>
+              <HorseRacingPage />
+            </MainLayout>
+          }
+        />
+
+        {/* GREYHOUND */}
+        <Route
+          path="/greyhound"
+          element={
+            <MainLayout>
+              <GreyhoundPage />
+            </MainLayout>
+          }
+        />
+
+        {/* DARTS */}
+        <Route
+          path="/darts"
+          element={
+            <MainLayout>
+              <DartsPage />
+            </MainLayout>
+          }
+        />
+
+        {/* SNOOKER */}
+        <Route
+          path="/snooker"
+          element={
+            <MainLayout>
+              <SnookerPage />
+            </MainLayout>
+          }
+        />
+
+        {/* CYCLING */}
+        <Route
+          path="/cycling"
+          element={
+            <MainLayout>
+              <CyclingPage />
+            </MainLayout>
+          }
+        />
+
+        {/* HANDBALL */}
+        <Route
+          path="/handball"
+          element={
+            <MainLayout>
+              <HandballPage />
+            </MainLayout>
+          }
+        />
+
+        {/* FUTSAL */}
+        <Route
+          path="/futsal"
+          element={
+            <MainLayout>
+              <FutsalPage />
+            </MainLayout>
+          }
+        />
+
+        {/* MOTORSPORT */}
+        <Route
+          path="/motorsport"
+          element={
+            <MainLayout>
+              <MotorsportPage />
+            </MainLayout>
+          }
+        />
+
+        {/* FORMULA 1 */}
+        <Route
+          path="/formula1"
+          element={
+            <MainLayout>
+              <Formula1Page />
+            </MainLayout>
+          }
+        />
+
+        {/* POLITICS */}
+        <Route
+          path="/politics"
+          element={
+            <MainLayout>
+              <PoliticsPage />
+            </MainLayout>
+          }
+        />
+
+        {/* COCK FIGHT */}
+        <Route
+          path="/cock-fight"
+          element={
+            <MainLayout>
+              <CockFightPage />
+            </MainLayout>
+          }
+        />
+
+        {/* BINARY */}
+        <Route
+          path="/binary"
+          element={
+            <MainLayout>
+              <BinaryPage />
             </MainLayout>
           }
         />
