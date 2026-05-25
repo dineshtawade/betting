@@ -10,9 +10,6 @@ import CasinoProviders from "./components/CasinoProviders";
 import UpcomingEvents from "./components/UpcomingEvents";
 import Footer from "./components/Footer";
 
-// 👇 POPUP IMPORT
-import InstallAppPopup from "./components/InstallAppPopup";
-
 import LoginPage from "./pages/LoginPage";
 import RegisterPage from "./pages/RegisterPage";
 
@@ -30,8 +27,10 @@ import PrivacyPolicy from "./pages/privacy/page";
 import Blogs from "./pages/blogs/page";
 import Categories from "./pages/categories/page";
 
+// 👇 ADD THIS
 import { useEffect } from "react";
 import { useLocation } from "react-router-dom";
+import InstallAppPopup from "./components/InstallAppPopup";
 
 // 👇 SCROLL TO TOP COMPONENT
 function ScrollToTop() {
@@ -51,12 +50,9 @@ function ScrollToTop() {
 function App() {
   return (
     <>
-      {/* 👇 SCROLL TOP */}
+      {/* 👇 ADD THIS */}
       <ScrollToTop />
-
-      {/* 👇 INSTALL POPUP */}
-      <InstallAppPopup />
-
+       <InstallAppPopup />
       <Routes>
 
         {/* HOME PAGE */}
@@ -124,9 +120,76 @@ function App() {
           }
         />
 
+        {/* RESPONSIBLE GAMING */}
+        <Route
+          path="/responsible-gaming"
+          element={
+            <MainLayout>
+              <ResponsibleGaming />
+              <Footer />
+            </MainLayout>
+          }
+        />
+
+        {/* CUSTOMER CARE */}
+        <Route
+          path="/customer-care"
+          element={
+            <MainLayout>
+              <CustomerCare />
+              <Footer />
+            </MainLayout>
+          }
+        />
+
+        {/* TERMS */}
+        <Route
+          path="/terms"
+          element={
+            <MainLayout>
+              <Terms />
+              <Footer />
+            </MainLayout>
+          }
+        />
+
+        {/* PRIVACY */}
+        <Route
+          path="/privacy"
+          element={
+            <MainLayout>
+              <PrivacyPolicy />
+              <Footer />
+            </MainLayout>
+          }
+        />
+
+        {/* BLOGS */}
+        <Route
+          path="/blogs"
+          element={
+            <MainLayout>
+              <Blogs />
+              <Footer />
+            </MainLayout>
+          }
+        />
+
+        {/* CATEGORIES */}
+        <Route
+          path="/categories"
+          element={
+            <MainLayout>
+              <Categories />
+              <Footer />
+            </MainLayout>
+          }
+        />
+
       </Routes>
     </>
   );
 }
 
 export default App;
+

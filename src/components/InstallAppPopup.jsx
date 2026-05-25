@@ -1,5 +1,3 @@
-"use client";
-
 import React, { useEffect, useState } from "react";
 import { X, Download } from "lucide-react";
 
@@ -7,33 +5,33 @@ export default function InstallAppPopup() {
   const [showPopup, setShowPopup] = useState(false);
 
   useEffect(() => {
-    const alreadyVisited = localStorage.getItem("app-popup-shown");
+    const popupShown = localStorage.getItem("popup-shown");
 
-    if (!alreadyVisited) {
+    if (!popupShown) {
       setShowPopup(true);
     }
   }, []);
 
   const closePopup = () => {
-    localStorage.setItem("app-popup-shown", "true");
+    localStorage.setItem("popup-shown", "true");
     setShowPopup(false);
   };
 
   if (!showPopup) return null;
 
   return (
-    <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/70 p-4">
-      <div className="relative w-full max-w-md rounded-3xl bg-[#0b0317] border border-cyan-400/20 p-6 text-white">
+    <div className="fixed inset-0 z-[9999] flex items-center justify-center bg-black/70 backdrop-blur-sm p-4">
+      <div className="relative w-full max-w-md rounded-3xl border border-cyan-400/20 bg-[#0b0317] p-6 text-white shadow-2xl">
 
-        {/* Close Button */}
+        {/* CLOSE BUTTON */}
         <button
           onClick={closePopup}
-          className="absolute top-4 right-4 text-white"
+          className="absolute top-4 right-4"
         >
-          <X size={20} />
+          <X size={22} />
         </button>
 
-        {/* Heading */}
+        {/* HEADING */}
         <h1 className="text-3xl font-bold text-[#ffd79a] leading-tight">
           Install Application
         </h1>
@@ -42,13 +40,13 @@ export default function InstallAppPopup() {
           Fake Link Pe Login Karne Se Bacho ✨
         </p>
 
-        {/* Description */}
+        {/* DESCRIPTION */}
         <p className="mt-5 text-sm text-gray-300">
           Official app install karke smooth aur secure access pao.
         </p>
 
-        {/* Features */}
-        <div className="mt-5 rounded-2xl border border-cyan-400/20 p-4 bg-white/5">
+        {/* FEATURES */}
+        <div className="mt-5 rounded-2xl border border-cyan-400/20 bg-white/5 p-4">
           <ul className="space-y-3 text-sm">
             <li>✅ Smooth 24x7 Access</li>
             <li>✅ Faster Performance</li>
@@ -57,10 +55,10 @@ export default function InstallAppPopup() {
           </ul>
         </div>
 
-        {/* Install Button */}
+        {/* BUTTON */}
         <button
           onClick={closePopup}
-          className="mt-6 w-full rounded-2xl bg-cyan-400 py-4 text-black font-bold flex items-center justify-center gap-2"
+          className="mt-6 flex w-full items-center justify-center gap-2 rounded-2xl bg-cyan-400 py-4 text-lg font-bold text-black"
         >
           <Download size={20} />
           INSTALL OFFICIAL APP
