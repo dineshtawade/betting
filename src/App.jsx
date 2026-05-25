@@ -27,143 +27,169 @@ import PrivacyPolicy from "./pages/privacy/page";
 import Blogs from "./pages/blogs/page";
 import Categories from "./pages/categories/page";
 
+// 👇 ADD THIS
+import { useEffect } from "react";
+import { useLocation } from "react-router-dom";
+import InstallAppPopup from "./components/InstallAppPopup";
+
+// 👇 SCROLL TO TOP COMPONENT
+function ScrollToTop() {
+  const { pathname } = useLocation();
+
+  useEffect(() => {
+    window.scrollTo({
+      top: 0,
+      left: 0,
+      behavior: "smooth",
+    });
+  }, [pathname]);
+
+  return null;
+}
+
 function App() {
   return (
-    <Routes>
+    <>
+      {/* 👇 ADD THIS */}
+      <ScrollToTop />
+       <InstallAppPopup />
+      <Routes>
 
-      {/* HOME PAGE */}
-      <Route
-        path="/"
-        element={
-          <MainLayout>
-            <div className="max-w-7xl mx-auto p-4 space-y-4">
-              <CricketDashboard />
-              <FootballDashboard />
-              <TennisDashboard />
-              <CasinoProviders />
-              <UpcomingEvents />
+        {/* HOME PAGE */}
+        <Route
+          path="/"
+          element={
+            <MainLayout>
+              <div className="max-w-7xl mx-auto p-4 space-y-4">
+                <CricketDashboard />
+                <FootballDashboard />
+                <TennisDashboard />
+                <CasinoProviders />
+                <UpcomingEvents />
+                <Footer />
+              </div>
+            </MainLayout>
+          }
+        />
+
+        {/* LOGIN */}
+        <Route path="/login" element={<LoginPage />} />
+
+        {/* REGISTER */}
+        <Route path="/signup" element={<RegisterPage />} />
+        <Route path="/register" element={<RegisterPage />} />
+
+        {/* CRICKET PAGE */}
+        <Route
+          path="/cricket-page"
+          element={
+            <MainLayout>
+              <CricketPage />
+            </MainLayout>
+          }
+        />
+
+        {/* FOOTBALL PAGE */}
+        <Route
+          path="/football-page"
+          element={
+            <MainLayout>
+              <FootballPage />
+            </MainLayout>
+          }
+        />
+
+        {/* TENNIS PAGE */}
+        <Route
+          path="/tennis-page"
+          element={
+            <MainLayout>
+              <TennisPage />
+            </MainLayout>
+          }
+        />
+
+        {/* ABOUT US */}
+        <Route
+          path="/about-us"
+          element={
+            <MainLayout>
+              <AboutUs />
               <Footer />
-            </div>
-          </MainLayout>
-        }
-      />
+            </MainLayout>
+          }
+        />
 
-      {/* LOGIN */}
-      <Route path="/login" element={<LoginPage />} />
+        {/* RESPONSIBLE GAMING */}
+        <Route
+          path="/responsible-gaming"
+          element={
+            <MainLayout>
+              <ResponsibleGaming />
+              <Footer />
+            </MainLayout>
+          }
+        />
 
-      {/* REGISTER */}
-      <Route path="/signup" element={<RegisterPage />} />
-      <Route path="/register" element={<RegisterPage />} />
+        {/* CUSTOMER CARE */}
+        <Route
+          path="/customer-care"
+          element={
+            <MainLayout>
+              <CustomerCare />
+              <Footer />
+            </MainLayout>
+          }
+        />
 
-      {/* CRICKET PAGE */}
-      <Route
-        path="/cricket-page"
-        element={
-          <MainLayout>
-            <CricketPage />
-          </MainLayout>
-        }
-      />
+        {/* TERMS */}
+        <Route
+          path="/terms"
+          element={
+            <MainLayout>
+              <Terms />
+              <Footer />
+            </MainLayout>
+          }
+        />
 
-      {/* FOOTBALL PAGE */}
-      <Route
-        path="/football-page"
-        element={
-          <MainLayout>
-            <FootballPage />
-          </MainLayout>
-        }
-      />
+        {/* PRIVACY */}
+        <Route
+          path="/privacy"
+          element={
+            <MainLayout>
+              <PrivacyPolicy />
+              <Footer />
+            </MainLayout>
+          }
+        />
 
-      {/* TENNIS PAGE */}
-      <Route
-        path="/tennis-page"
-        element={
-          <MainLayout>
-            <TennisPage />
-          </MainLayout>
-        }
-      />
+        {/* BLOGS */}
+        <Route
+          path="/blogs"
+          element={
+            <MainLayout>
+              <Blogs />
+              <Footer />
+            </MainLayout>
+          }
+        />
 
-      {/* ABOUT US */}
-      <Route
-        path="/about-us"
-        element={
-          <MainLayout>
-            <AboutUs />
-            <Footer />
-          </MainLayout>
-        }
-      />
+        {/* CATEGORIES */}
+        <Route
+          path="/categories"
+          element={
+            <MainLayout>
+              <Categories />
+              <Footer />
+            </MainLayout>
+          }
+        />
 
-      {/* RESPONSIBLE GAMING */}
-      <Route
-        path="/responsible-gaming"
-        element={
-          <MainLayout>
-            <ResponsibleGaming />
-            <Footer />
-          </MainLayout>
-        }
-      />
-
-      {/* CUSTOMER CARE */}
-      <Route
-        path="/customer-care"
-        element={
-          <MainLayout>
-            <CustomerCare />
-            <Footer />
-          </MainLayout>
-        }
-      />
-
-      {/* TERMS */}
-      <Route
-        path="/terms"
-        element={
-          <MainLayout>
-            <Terms />
-            <Footer />
-          </MainLayout>
-        }
-      />
-
-      {/* PRIVACY */}
-      <Route
-        path="/privacy"
-        element={
-          <MainLayout>
-            <PrivacyPolicy />
-            <Footer />
-          </MainLayout>
-        }
-      />
-
-      {/* BLOGS */}
-      <Route
-        path="/blogs"
-        element={
-          <MainLayout>
-            <Blogs />
-            <Footer />
-          </MainLayout>
-        }
-      />
-
-      {/* CATEGORIES */}
-      <Route
-        path="/categories"
-        element={
-          <MainLayout>
-            <Categories />
-            <Footer />
-          </MainLayout>
-        }
-      />
-
-    </Routes>
+      </Routes>
+    </>
   );
 }
 
 export default App;
+
