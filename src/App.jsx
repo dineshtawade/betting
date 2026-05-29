@@ -8,6 +8,7 @@ import FootballDashboard from "./components/FootballDashboard";
 import TennisDashboard from "./components/TennisDashboard";
 import CasinoProviders from "./components/CasinoProviders";
 import UpcomingEvents from "./components/UpcomingEvents";
+import ReddyBookLandingPage from "./components/ReddyBookLandingPage"
 import Footer from "./components/Footer";
 
 import LoginPage from "./pages/LoginPage";
@@ -93,6 +94,7 @@ function App() {
                 <TennisDashboard />
                 <CasinoProviders />
                 <UpcomingEvents />
+                <ReddyBookLandingPage/>
                 <Footer />
               </div>
             </MainLayout>
