@@ -1,8 +1,10 @@
+// App.jsx
 import React from "react";
-import { Routes, Route } from "react-router-dom";
+import { Routes, Route, Navigate } from "react-router-dom";
+import { useMutation } from '@tanstack/react-query';
+import { toast } from 'react-hot-toast';
 
 import MainLayout from "./layouts/MainLayout";
-
 import CricketDashboard from "./components/CricketDashboard";
 import FootballDashboard from "./components/FootballDashboard";
 import TennisDashboard from "./components/TennisDashboard";
@@ -13,6 +15,7 @@ import Footer from "./components/Footer";
 
 import LoginPage from "./pages/LoginPage";
 import RegisterPage from "./pages/RegisterPage";
+import AdminDashboard from "./pages/AdminDashboard"; // You'll need to create this
 
 // SPORT PAGES
 import CricketPage from "./pages/CricketPage";
@@ -55,12 +58,23 @@ import PrivacyPolicy from "./pages/privacy/page";
 import Blogs from "./pages/blogs/page";
 import Categories from "./pages/categories/page";
 
-// 👇 ADD THIS
 import { useEffect } from "react";
 import { useLocation } from "react-router-dom";
 import InstallAppPopup from "./components/InstallAppPopup";
 
-// 👇 SCROLL TO TOP COMPONENT
+// Protected Route Component
+function ProtectedRoute({ children }) {
+  const token = localStorage.getItem("token");
+  
+  if (!token) {
+    toast.error("Please login to access this page");
+    return <Navigate to="/login" replace />;
+  }
+  
+  return children;
+}
+
+// Scroll to Top Component
 function ScrollToTop() {
   const { pathname } = useLocation();
 
@@ -78,11 +92,9 @@ function ScrollToTop() {
 function App() {
   return (
     <>
-      {/* 👇 ADD THIS */}
       <ScrollToTop />
-       <InstallAppPopup />
+      <InstallAppPopup />
       <Routes>
-
         {/* HOME PAGE */}
         <Route
           path="/"
@@ -101,12 +113,20 @@ function App() {
           }
         />
 
-        {/* LOGIN */}
+        {/* LOGIN & REGISTER */}
         <Route path="/login" element={<LoginPage />} />
-
-        {/* REGISTER */}
         <Route path="/signup" element={<RegisterPage />} />
         <Route path="/register" element={<RegisterPage />} />
+
+        {/* ADMIN DASHBOARD - PROTECTED */}
+        <Route
+          path="/admin/dashboard"
+          element={
+            <ProtectedRoute>
+              <AdminDashboard />
+            </ProtectedRoute>
+          }
+        />
 
         {/* CRICKET PAGE */}
         <Route
@@ -117,8 +137,6 @@ function App() {
             </MainLayout>
           }
         />
-
-       
 
         {/* FOOTBALL PAGE */}
         <Route
@@ -487,10 +505,11 @@ function App() {
           }
         />
 
+        {/* 404 - NOT FOUND */}
+        <Route path="*" element={<Navigate to="/" replace />} />
       </Routes>
     </>
   );
 }
 
 export default App;
-
