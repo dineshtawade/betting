@@ -8,6 +8,8 @@ export default function BlogsManagement() {
   const queryClient = useQueryClient();
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [editingBlog, setEditingBlog] = useState(null);
+  const [imageFile, setImageFile] = useState(null);
+  const [imagePreview, setImagePreview] = useState('');
   const [formData, setFormData] = useState({
     title: '',
     description: '',
@@ -22,6 +24,42 @@ export default function BlogsManagement() {
   });
 
   const blogs = blogsData?.data || [];
+
+  // Convert image to base64
+  const convertToBase64 = (file) => {
+    return new Promise((resolve, reject) => {
+      const reader = new FileReader();
+      reader.readAsDataURL(file);
+      reader.onload = () => resolve(reader.result);
+      reader.onerror = (error) => reject(error);
+    });
+  };
+
+  // Handle image selection
+  const handleImageChange = async (e) => {
+    const file = e.target.files[0];
+    if (file) {
+      // Validate file type
+      if (!file.type.startsWith('image/')) {
+        toast.error('Please select an image file');
+        return;
+      }
+      
+      // Validate file size (max 5MB)
+      if (file.size > 5 * 1024 * 1024) {
+        toast.error('Image size should be less than 5MB');
+        return;
+      }
+
+      setImageFile(file);
+      const base64 = await convertToBase64(file);
+      setImagePreview(base64);
+      setFormData({
+        ...formData,
+        image: base64
+      });
+    }
+  };
 
   // Create blog mutation
   const createMutation = useMutation({
@@ -70,6 +108,8 @@ export default function BlogsManagement() {
         image: blog.image || '',
         status: blog.status,
       });
+      setImagePreview(blog.image || '');
+      setImageFile(null);
     } else {
       setEditingBlog(null);
       setFormData({
@@ -78,6 +118,8 @@ export default function BlogsManagement() {
         image: '',
         status: 'published'
       });
+      setImagePreview('');
+      setImageFile(null);
     }
     setIsModalOpen(true);
   };
@@ -91,6 +133,8 @@ export default function BlogsManagement() {
       image: '',
       status: 'published'
     });
+    setImagePreview('');
+    setImageFile(null);
   };
 
   const handleSubmit = (e) => {
@@ -208,8 +252,8 @@ export default function BlogsManagement() {
               <tr>
                 <td colSpan="5" className="px-6 py-4 text-center text-gray-500">
                   No blogs found. Create your first blog!
-                 </td>
-               </tr>
+                </td>
+              </tr>
             ) : (
               blogs.map((blog) => (
                 <tr key={blog._id} className="hover:bg-gray-50">
@@ -221,13 +265,13 @@ export default function BlogsManagement() {
                         <span className="text-gray-400 text-xs">No img</span>
                       </div>
                     )}
-                   </td>
+                  </td>
                   <td className="px-6 py-4">
                     <div className="text-sm font-medium text-gray-900">{blog.title}</div>
-                   </td>
+                  </td>
                   <td className="px-6 py-4">
                     <div className="text-sm text-gray-500 max-w-md truncate">{blog.description}</div>
-                   </td>
+                  </td>
                   <td className="px-6 py-4 whitespace-nowrap">
                     <span className={`px-2 inline-flex text-xs leading-5 font-semibold rounded-full ${
                       blog.status === 'published' 
@@ -236,7 +280,7 @@ export default function BlogsManagement() {
                     }`}>
                       {blog.status}
                     </span>
-                   </td>
+                  </td>
                   <td className="px-6 py-4 whitespace-nowrap text-sm font-medium">
                     <button
                       onClick={() => openModal(blog)}
@@ -250,7 +294,7 @@ export default function BlogsManagement() {
                     >
                       Delete
                     </button>
-                   </td>
+                  </td>
                 </tr>
               ))
             )}
@@ -288,20 +332,92 @@ export default function BlogsManagement() {
                   className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 text-sm md:text-base"
                 />
               </div>
+              
+              {/* Image Upload Section */}
               <div className="mb-4">
-                <label className="block text-sm font-medium text-gray-700 mb-2">Image URL</label>
-                <input
-                  type="url"
-                  name="image"
-                  value={formData.image}
-                  onChange={handleChange}
-                  placeholder="https://example.com/image.jpg"
-                  className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 text-sm md:text-base"
-                />
-                {formData.image && (
-                  <img src={formData.image} alt="Preview" className="mt-2 w-24 h-24 md:w-32 md:h-32 object-cover rounded" />
+                <label className="block text-sm font-medium text-gray-700 mb-2">
+                  Image
+                </label>
+                
+                {/* File Upload Button */}
+                <div className="mt-1 flex justify-center px-6 pt-5 pb-6 border-2 border-gray-300 border-dashed rounded-md hover:border-blue-400 transition">
+                  <div className="space-y-1 text-center">
+                    <svg
+                      className="mx-auto h-12 w-12 text-gray-400"
+                      stroke="currentColor"
+                      fill="none"
+                      viewBox="0 0 48 48"
+                      aria-hidden="true"
+                    >
+                      <path
+                        d="M28 8H12a4 4 0 00-4 4v20m32-12v8m0 0v8a4 4 0 01-4 4H12a4 4 0 01-4-4v-4m32-4l-3.172-3.172a4 4 0 00-5.656 0L28 28M8 32l9.172-9.172a4 4 0 015.656 0L28 28m0 0l4 4m4-24h8m-4-4v8m-12 4h.02"
+                        strokeWidth={2}
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                      />
+                    </svg>
+                    <div className="flex text-sm text-gray-600">
+                      <label
+                        htmlFor="image-upload"
+                        className="relative cursor-pointer bg-white rounded-md font-medium text-blue-600 hover:text-blue-500 focus-within:outline-none focus-within:ring-2 focus-within:ring-offset-2 focus-within:ring-blue-500"
+                      >
+                        <span>Upload a file</span>
+                        <input
+                          id="image-upload"
+                          name="image-upload"
+                          type="file"
+                          className="sr-only"
+                          accept="image/*"
+                          onChange={handleImageChange}
+                        />
+                      </label>
+                      <p className="pl-1">or drag and drop</p>
+                    </div>
+                    <p className="text-xs text-gray-500">
+                      PNG, JPG, GIF up to 5MB
+                    </p>
+                  </div>
+                </div>
+
+                {/* Image URL Input (Alternative) */}
+                <div className="mt-3">
+                  <label className="block text-xs text-gray-500 mb-1">Or enter image URL</label>
+                  <input
+                    type="url"
+                    name="image"
+                    value={formData.image}
+                    onChange={handleChange}
+                    placeholder="https://example.com/image.jpg"
+                    className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 text-sm"
+                  />
+                </div>
+
+                {/* Image Preview */}
+                {(imagePreview || formData.image) && (
+                  <div className="mt-3">
+                    <label className="block text-sm font-medium text-gray-700 mb-2">Preview</label>
+                    <div className="relative inline-block">
+                      <img
+                        src={imagePreview || formData.image}
+                        alt="Preview"
+                        className="w-32 h-32 object-cover rounded-lg border border-gray-300"
+                      />
+                      <button
+                        type="button"
+                        onClick={() => {
+                          setImagePreview('');
+                          setImageFile(null);
+                          setFormData({ ...formData, image: '' });
+                        }}
+                        className="absolute -top-2 -right-2 bg-red-500 text-white rounded-full w-6 h-6 flex items-center justify-center hover:bg-red-600"
+                      >
+                        ×
+                      </button>
+                    </div>
+                  </div>
                 )}
               </div>
+
               <div className="mb-4">
                 <label className="block text-sm font-medium text-gray-700 mb-2">Status</label>
                 <select
