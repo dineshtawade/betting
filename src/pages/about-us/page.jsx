@@ -51,6 +51,16 @@ export default function About() {
                 platform is, how it works, and what you should know before getting started.
               </p>
 
+              {/* Image 1 - Homepage Image 5 */}
+              <div className="my-6 overflow-hidden rounded-xl shadow-md">
+                <img
+                  src="/Homepage Image 5.webp"
+                  alt="Cricket betting platform overview"
+                  className="w-full h-auto object-cover rounded-xl"
+                  loading="lazy"
+                />
+              </div>
+
               <p>
                 This is not a page full of hype. It is a practical overview of how
                 Reddy Book Club works, what kind of user experience the platform aims
@@ -93,6 +103,16 @@ export default function About() {
                 <li>deposit and withdrawal management</li>
                 <li>support when users need help with access or account issues</li>
               </ul>
+
+              {/* Image 2 - Homepage Image 7 */}
+              <div className="my-6 overflow-hidden rounded-xl shadow-md">
+                <img
+                  src="/Homepage Image 7.webp"
+                  alt="Football and sports betting options"
+                  className="w-full h-auto object-cover rounded-xl"
+                  loading="lazy"
+                />
+              </div>
             </section>
 
             <section className="space-y-4">

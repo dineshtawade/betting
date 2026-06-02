@@ -74,16 +74,28 @@ function ProtectedRoute({ children }) {
   return children;
 }
 
-// Scroll to Top Component
+// Scroll to Top Component - Enhanced for all routes including footer pages
 function ScrollToTop() {
   const { pathname } = useLocation();
 
   useEffect(() => {
+    // Immediate scroll to top without animation for instant response
     window.scrollTo({
       top: 0,
       left: 0,
-      behavior: "smooth",
+      behavior: "instant" // Use "instant" for immediate scroll, or "smooth" for animated
     });
+    
+    // Also handle any delayed content rendering
+    const timeoutId = setTimeout(() => {
+      window.scrollTo({
+        top: 0,
+        left: 0,
+        behavior: "instant"
+      });
+    }, 100);
+    
+    return () => clearTimeout(timeoutId);
   }, [pathname]);
 
   return null;
@@ -428,7 +440,7 @@ function App() {
           }
         />
 
-        {/* ABOUT US */}
+        {/* ABOUT US - Fixed scroll to top */}
         <Route
           path="/about-us"
           element={
@@ -439,7 +451,7 @@ function App() {
           }
         />
 
-        {/* RESPONSIBLE GAMING */}
+        {/* RESPONSIBLE GAMING - Fixed scroll to top */}
         <Route
           path="/responsible-gaming"
           element={
@@ -450,7 +462,7 @@ function App() {
           }
         />
 
-        {/* CUSTOMER CARE */}
+        {/* CUSTOMER CARE - Fixed scroll to top */}
         <Route
           path="/customer-care"
           element={
@@ -461,7 +473,7 @@ function App() {
           }
         />
 
-        {/* TERMS */}
+        {/* TERMS - Fixed scroll to top */}
         <Route
           path="/terms"
           element={
@@ -472,7 +484,7 @@ function App() {
           }
         />
 
-        {/* PRIVACY */}
+        {/* PRIVACY - Fixed scroll to top */}
         <Route
           path="/privacy"
           element={
@@ -483,7 +495,7 @@ function App() {
           }
         />
 
-        {/* BLOGS */}
+        {/* BLOGS - Fixed scroll to top */}
         <Route
           path="/blogs"
           element={
@@ -494,7 +506,7 @@ function App() {
           }
         />
 
-        {/* CATEGORIES */}
+        {/* CATEGORIES - Fixed scroll to top */}
         <Route
           path="/categories"
           element={

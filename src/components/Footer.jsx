@@ -12,6 +12,25 @@ export default function Footer() {
     { name: "Categories", path: "/categories" },
   ];
 
+  // Handle click to ensure scroll to top (backup mechanism)
+  const handleLinkClick = () => {
+    // Immediate scroll to top
+    window.scrollTo({
+      top: 0,
+      left: 0,
+      behavior: "instant"
+    });
+    
+    // Backup timeout for any delayed rendering
+    setTimeout(() => {
+      window.scrollTo({
+        top: 0,
+        left: 0,
+        behavior: "instant"
+      });
+    }, 50);
+  };
+
   return (
     <footer className="bg-[#1a1a1a] text-gray-400 py-8 border-t border-[#333] shrink-0">
       <div className="max-w-7xl mx-auto px-4">
@@ -21,6 +40,7 @@ export default function Footer() {
             <Link
               key={link.name}
               to={link.path}
+              onClick={handleLinkClick}
               className="text-[11px] hover:text-[#cca04c] transition-colors uppercase tracking-wider py-1"
             >
               {link.name}

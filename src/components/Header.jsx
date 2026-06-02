@@ -1,9 +1,10 @@
 import React, { useState, useEffect } from 'react';
-import { Search, Home, Menu } from 'lucide-react';
+import { Search, Home, Menu, Circle } from 'lucide-react';
 import { Link, useNavigate, useLocation } from 'react-router-dom';
 
 export default function Header({ onMenuToggle = () => {} }) {
   const [activeTab, setActiveTab] = useState('HOME');
+  const [blinkColor, setBlinkColor] = useState('green');
   const navigate = useNavigate();
   const location = useLocation();
 
@@ -41,6 +42,25 @@ export default function Header({ onMenuToggle = () => {} }) {
     { name: 'BINARY', icon: '🎲', path: '/binary' },
   ];
 
+  // Footer pages for marquee
+  const footerPages = [
+    { name: '🏠 About Us', path: '/about-us' },
+    { name: '🎮 Responsible Gaming', path: '/responsible-gaming' },
+    { name: '📞 Customer Care', path: '/customer-care' },
+    { name: '📜 Terms & Conditions', path: '/terms' },
+    { name: '🔒 Privacy Policy', path: '/privacy' },
+    { name: '📝 Blogs', path: '/blogs' },
+    { name: '📂 Categories', path: '/categories' },
+  ];
+
+  // Blinking effect for red/green light
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setBlinkColor(prev => prev === 'green' ? 'red' : 'green');
+    }, 1000);
+    return () => clearInterval(interval);
+  }, []);
+
   // Update active tab based on current route
   useEffect(() => {
     const currentItem = navItems.find(item => item.path === location.pathname);
@@ -64,6 +84,11 @@ export default function Header({ onMenuToggle = () => {} }) {
     }
     
     return 'bg-[#2a2a2a] text-gray-200 hover:bg-[#333]';
+  };
+
+  const handleFooterClick = (path) => {
+    window.scrollTo({ top: 0, behavior: 'instant' });
+    navigate(path);
   };
 
   return (
@@ -126,6 +151,51 @@ export default function Header({ onMenuToggle = () => {} }) {
           ))}
         </div>
       </nav>
+
+      {/* --- MARQUEE SECTION FOR FOOTER PAGES --- */}
+      <div className="bg-[#1a1a1a] border-t border-[#333] py-1.5 overflow-hidden relative">
+        {/* Blinking Red/Green Light */}
+        <div className="absolute left-3 top-1/2 -translate-y-1/2 flex items-center gap-1 z-10">
+          <Circle 
+            size={10} 
+            className={`fill-current ${blinkColor === 'green' ? 'text-green-500' : 'text-red-500'} transition-all duration-300`}
+          />
+          <span className="text-[8px] text-gray-500 uppercase tracking-wider">LIVE</span>
+        </div>
+
+        {/* Marquee Content */}
+        <div className="animate-marquee whitespace-nowrap">
+          {[...footerPages, ...footerPages].map((page, index) => (
+            <button
+              key={`${page.name}-${index}`}
+              onClick={() => handleFooterClick(page.path)}
+              className="mx-3 text-[10px] text-gray-400 hover:text-[#cca04c] transition-colors uppercase tracking-wider inline-flex items-center gap-1"
+            >
+              <span className="text-[#cca04c]">•</span>
+              {page.name}
+            </button>
+          ))}
+        </div>
+      </div>
+
+      {/* Add CSS animation for marquee */}
+      <style jsx>{`
+        @keyframes marquee {
+          0% {
+            transform: translateX(0%);
+          }
+          100% {
+            transform: translateX(-50%);
+          }
+        }
+        .animate-marquee {
+          animation: marquee 20s linear infinite;
+          display: inline-flex;
+        }
+        .animate-marquee:hover {
+          animation-play-state: paused;
+        }
+      `}</style>
     </header>
   );
 }

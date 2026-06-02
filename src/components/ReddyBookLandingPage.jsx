@@ -21,7 +21,10 @@ import {
   ShieldCheck,
   Users,
   Layers,
-  Sparkles
+  Sparkles,
+  Trophy,
+  Gamepad2,
+  Zap
 } from 'lucide-react';
 import ReddyBookLanding from './ReddyBookLanding';
 import ReddyBookFeatures from './ReddyBookFeatures';
@@ -53,6 +56,40 @@ const ReddyBookClubPage = () => {
     betting2: "/Homepage Image 13 & 14 (2).webp",
     betting: "/Homepage Image 13 & 14.webp"
   };
+
+  // Sports category images from web (high-quality free stock images)
+  const webSportsImages = [
+    {
+      url: "https://images.unsplash.com/photo-1531415074968-036ba1b575da?w=600&h=400&fit=crop",
+      name: "Cricket",
+      alt: "Cricket match action"
+    },
+    {
+      url: "https://images.unsplash.com/photo-1522778119026-d647f0596c20?w=600&h=400&fit=crop",
+      name: "Football",
+      alt: "Football stadium action"
+    },
+    {
+      url: "https://images.unsplash.com/photo-1546519638-68e109498ffc?w=600&h=400&fit=crop",
+      name: "Basketball",
+      alt: "Basketball game"
+    },
+    // {
+    //   url: "https://images.unsplash.com/photo-1542751371-adc38448a05e?w=600&h=400&fit=crop",
+    //   name: "Esports",
+    //   alt: "Esports tournament"
+    // },
+    // {
+    //   url: "https://images.unsplash.com/photo-1601924582970-9238bcb495d9?w=600&h=400&fit=crop",
+    //   name: "Tennis",
+    //   alt: "Tennis match"
+    // },
+    // {
+    //   url: "https://images.pexels.com/photos/270404/pexels-photo-270404.jpeg?w=600&h=400&fit=crop",
+    //   name: "Casino",
+    //   alt: "Casino games"
+    // }
+  ];
 
   const faqs = [
     { q: "What is Reddy Book Club and how does it work?", a: "Reddy Book Club is an online platform, where a user can access services using a mobile app, or web interface. Individuals are allowed to subscribe to the site, finish the reddybook sign-in, and begin utilizing the capabilities immediately. The site is made to be straightforward and easy to use, and both new and experienced users can easily use the site. There are a number of individuals who visit the site to find the reddybook club or reddyanna with the aim of accessing the site easily and conveniently." },
@@ -184,6 +221,19 @@ const ReddyBookClubPage = () => {
         </div>
       </section>
 
+      {/* Image 1 - Homepage Image 5 after milestones */}
+      <section className="py-8 bg-[#faf6eb] border-b border-[#ebdcb9]">
+        <div className="container mx-auto px-4 sm:px-6 max-w-5xl">
+          <div className="overflow-hidden rounded-xl shadow-lg">
+            <img 
+              src={images.cricket} 
+              alt="Cricket betting platform" 
+              className="w-full h-auto object-cover"
+            />
+          </div>
+        </div>
+      </section>
+
       {/* Overview Contextual Article Block */}
       <section id="about" className="py-16 sm:py-24 bg-[#fffdf9] border-b border-[#ebdcb9]">
         <div className="container mx-auto px-4 sm:px-6 max-w-5xl">
@@ -194,9 +244,29 @@ const ReddyBookClubPage = () => {
               <p className="text-gray-600 font-light text-base md:text-lg leading-relaxed">
                 Reddy Book Club is an online solution where the user can avail the services using a mobile and web-based system. It is geared towards simplicity, efficiency, and ease of use to all forms of users. 
               </p>
+              
+              {/* Image 2 - Homepage Image 7 */}
+              <div className="my-6 overflow-hidden rounded-xl shadow-md">
+                <img 
+                  src={images.football} 
+                  alt="Football betting options" 
+                  className="w-full h-auto object-cover"
+                />
+              </div>
+              
               <p className="text-gray-600 font-light text-base md:text-lg leading-relaxed">
                 Be it in the process of trying to find the login to reddybook, or trying to find the apk of the reddy book club, or simply trying to find out what the reddybook club is, this site is created in such a way that it may be convenient and usable. The increased popularity of <span className="font-medium text-gray-900">reddy anna club</span> and <span className="font-medium text-gray-900">reddy anna book club</span> indicates that users are moving to websites that provide easy navigation and fast access. 
               </p>
+              
+              {/* Image 3 - Homepage Image 9 */}
+              <div className="my-6 overflow-hidden rounded-xl shadow-md">
+                <img 
+                  src={images.basketball} 
+                  alt="Basketball betting markets" 
+                  className="w-full h-auto object-cover"
+                />
+              </div>
+              
               <p className="text-gray-600 font-light text-base md:text-lg leading-relaxed">
                 Being digitally robust, reddybook still draws more users seeking a trustworthy and user-friendly interface. A good number of users type in reddybook club or reddyanna in search of a platform where they can access without needless complication. Reddy Book Club serves this purpose by providing a simplistic interface that aids in navigating with ease.
               </p>
@@ -218,67 +288,65 @@ const ReddyBookClubPage = () => {
         </div>
       </section>
 
-      {/* Structural Placement of image_f05fa1.png / image_effa09.png Side-by-Side Graphic Template */}
+      {/* Structural Placement of ReddyBookLanding */}
       <section id="features" className="bg-[#faf6eb] border-b border-[#ebdcb9]">
         <ReddyBookLanding />
       </section>
 
-      {/* Sports Categories Gallery Section */}
+      {/* Image 4 - Homepage Image 10 & 11 */}
+      <section className="py-12 bg-white border-b border-[#ebdcb9]">
+        <div className="container mx-auto px-4 sm:px-6 max-w-5xl">
+          <div className="overflow-hidden rounded-xl shadow-lg">
+            <img 
+              src={images.esports} 
+              alt="Esports gaming platform" 
+              className="w-full h-auto object-cover"
+            />
+          </div>
+        </div>
+      </section>
+
+      {/* Sports Categories Section with Web Images */}
       <section className="py-16 sm:py-20 bg-white border-b border-[#ebdcb9]">
         <div className="container mx-auto px-4 sm:px-6">
           <div className="text-center max-w-2xl mx-auto mb-12">
+            <div className="flex items-center justify-center gap-2 mb-3">
+              <Trophy size={28} className="text-[#b38f46]" />
+              <Zap size={24} className="text-[#e0a100]" />
+              <Gamepad2 size={24} className="text-[#b38f46]" />
+            </div>
             <h2 className="text-3xl font-serif font-bold text-gray-900">Explore Our Sports Categories</h2>
             <p className="text-sm text-gray-500 mt-2 font-light">Wide range of sports and events available on Reddy Book Club</p>
+            <div className="w-16 h-0.5 bg-[#e0a100] mx-auto mt-4"></div>
           </div>
           
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-            {/* Cricket */}
-            <div className="group relative overflow-hidden rounded-xl shadow-md hover:shadow-xl transition-all duration-300">
-              <img src={images.cricket} alt="Cricket" className="w-full h-64 object-cover group-hover:scale-105 transition-transform duration-500" />
-              <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent flex items-end p-6">
-                <h3 className="text-white text-2xl font-serif font-bold">Cricket</h3>
+            {webSportsImages.map((sport, idx) => (
+              <div key={idx} className="group relative overflow-hidden rounded-xl shadow-md hover:shadow-xl transition-all duration-300">
+                <img 
+                  src={sport.url} 
+                  alt={sport.alt}
+                  className="w-full h-64 object-cover group-hover:scale-105 transition-transform duration-500"
+                  loading="lazy"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/30 to-transparent flex items-end p-6">
+                  <h3 className="text-white text-2xl font-serif font-bold tracking-wide">{sport.name}</h3>
+                </div>
               </div>
-            </div>
-            
-            {/* Football */}
-            <div className="group relative overflow-hidden rounded-xl shadow-md hover:shadow-xl transition-all duration-300">
-              <img src={images.football} alt="Football" className="w-full h-64 object-cover group-hover:scale-105 transition-transform duration-500" />
-              <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent flex items-end p-6">
-                <h3 className="text-white text-2xl font-serif font-bold">Football</h3>
-              </div>
-            </div>
-            
-            {/* Basketball */}
-            <div className="group relative overflow-hidden rounded-xl shadow-md hover:shadow-xl transition-all duration-300">
-              <img src={images.basketball} alt="Basketball" className="w-full h-64 object-cover group-hover:scale-105 transition-transform duration-500" />
-              <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent flex items-end p-6">
-                <h3 className="text-white text-2xl font-serif font-bold">Basketball</h3>
-              </div>
-            </div>
-            
-            {/* Esports */}
-            <div className="group relative overflow-hidden rounded-xl shadow-md hover:shadow-xl transition-all duration-300">
-              <img src={images.esports} alt="Esports" className="w-full h-64 object-cover group-hover:scale-105 transition-transform duration-500" />
-              <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent flex items-end p-6">
-                <h3 className="text-white text-2xl font-serif font-bold">Esports</h3>
-              </div>
-            </div>
-            
-            {/* Betting Options 1 */}
-            <div className="group relative overflow-hidden rounded-xl shadow-md hover:shadow-xl transition-all duration-300">
-              <img src={images.betting1} alt="Live Betting" className="w-full h-64 object-cover group-hover:scale-105 transition-transform duration-500" />
-              <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent flex items-end p-6">
-                <h3 className="text-white text-2xl font-serif font-bold">Live Betting</h3>
-              </div>
-            </div>
-            
-            {/* Betting Options 2 */}
-            <div className="group relative overflow-hidden rounded-xl shadow-md hover:shadow-xl transition-all duration-300">
-              <img src={images.betting2} alt="Exchange Platform" className="w-full h-64 object-cover group-hover:scale-105 transition-transform duration-500" />
-              <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent flex items-end p-6">
-                <h3 className="text-white text-2xl font-serif font-bold">Exchange Platform</h3>
-              </div>
-            </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Image 5 - Homepage Image 13 & 14 (1) */}
+      <section className="py-12 bg-[#faf6eb] border-b border-[#ebdcb9]">
+        <div className="container mx-auto px-4 sm:px-6 max-w-5xl">
+          <div className="overflow-hidden rounded-xl shadow-lg">
+            <img 
+              src={images.betting1} 
+              alt="Live betting exchange" 
+              className="w-full h-auto object-cover"
+            />
           </div>
         </div>
       </section>
@@ -346,6 +414,19 @@ const ReddyBookClubPage = () => {
         </div>
       </section>
 
+      {/* Image 6 - Homepage Image 13 & 14 (2) */}
+      <section className="py-12 bg-[#fffdf9] border-b border-[#ebdcb9]">
+        <div className="container mx-auto px-4 sm:px-6 max-w-5xl">
+          <div className="overflow-hidden rounded-xl shadow-lg">
+            <img 
+              src={images.betting2} 
+              alt="Exchange platform features" 
+              className="w-full h-auto object-cover"
+            />
+          </div>
+        </div>
+      </section>
+
       {/* Financial Operations Step Architecture Ledger (Deposit & Withdrawal) */}
       <section className="py-16 sm:py-24 bg-[#fffdf9] border-b border-[#ebdcb9]">
         <div className="container mx-auto px-4 sm:px-6 max-w-5xl">
@@ -393,9 +474,22 @@ const ReddyBookClubPage = () => {
         </div>
       </section>
 
-      {/* Structural Placement of image_efef3e.png System Features Component */}
+      {/* Structural Placement of ReddyBookFeatures */}
       <section className="bg-[#faf6eb]">
         <ReddyBookFeatures />
+      </section>
+
+      {/* Image 7 - Homepage Image 13 & 14 */}
+      <section className="py-12 bg-white border-b border-[#ebdcb9]">
+        <div className="container mx-auto px-4 sm:px-6 max-w-5xl">
+          <div className="overflow-hidden rounded-xl shadow-lg">
+            <img 
+              src={images.betting} 
+              alt="Complete betting platform" 
+              className="w-full h-auto object-cover"
+            />
+          </div>
+        </div>
       </section>
 
       {/* Tab-Switched Interactive Routing Terminal Area */}
