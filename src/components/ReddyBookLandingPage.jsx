@@ -44,12 +44,14 @@ const ReddyBookClubPage = () => {
   };
 
   const images = {
-    hero: "https://images.unsplash.com/photo-1531415074967-9c3c2c7c5c0d?w=1600&q=85",
-    cricket: "https://images.unsplash.com/photo-1540747913346-19e32dc3e97e?w=800&q=80",
-    football: "https://images.unsplash.com/photo-1577223625816-7546f13df25d?w=800&q=80",
-    basketball: "https://images.unsplash.com/photo-1546519638-68e109498ffc?w=800&q=80",
-    esports: "https://images.unsplash.com/photo-1542751371-adc38448a05e?w=800&q=80",
-    betting: "https://images.unsplash.com/photo-1596496181854-6f47c0e6b195?w=800&q=80"
+    hero: "/Homepage Banner.webp",
+    cricket: "/Homepage Image 5.webp",
+    football: "/Homepage Image 7.webp",
+    basketball: "/Homepage Image 9.webp",
+    esports: "/Homepage Image 10 & 11.webp",
+    betting1: "/Homepage Image 13 & 14 (1).webp",
+    betting2: "/Homepage Image 13 & 14 (2).webp",
+    betting: "/Homepage Image 13 & 14.webp"
   };
 
   const faqs = [
@@ -219,6 +221,66 @@ const ReddyBookClubPage = () => {
       {/* Structural Placement of image_f05fa1.png / image_effa09.png Side-by-Side Graphic Template */}
       <section id="features" className="bg-[#faf6eb] border-b border-[#ebdcb9]">
         <ReddyBookLanding />
+      </section>
+
+      {/* Sports Categories Gallery Section */}
+      <section className="py-16 sm:py-20 bg-white border-b border-[#ebdcb9]">
+        <div className="container mx-auto px-4 sm:px-6">
+          <div className="text-center max-w-2xl mx-auto mb-12">
+            <h2 className="text-3xl font-serif font-bold text-gray-900">Explore Our Sports Categories</h2>
+            <p className="text-sm text-gray-500 mt-2 font-light">Wide range of sports and events available on Reddy Book Club</p>
+          </div>
+          
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+            {/* Cricket */}
+            <div className="group relative overflow-hidden rounded-xl shadow-md hover:shadow-xl transition-all duration-300">
+              <img src={images.cricket} alt="Cricket" className="w-full h-64 object-cover group-hover:scale-105 transition-transform duration-500" />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent flex items-end p-6">
+                <h3 className="text-white text-2xl font-serif font-bold">Cricket</h3>
+              </div>
+            </div>
+            
+            {/* Football */}
+            <div className="group relative overflow-hidden rounded-xl shadow-md hover:shadow-xl transition-all duration-300">
+              <img src={images.football} alt="Football" className="w-full h-64 object-cover group-hover:scale-105 transition-transform duration-500" />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent flex items-end p-6">
+                <h3 className="text-white text-2xl font-serif font-bold">Football</h3>
+              </div>
+            </div>
+            
+            {/* Basketball */}
+            <div className="group relative overflow-hidden rounded-xl shadow-md hover:shadow-xl transition-all duration-300">
+              <img src={images.basketball} alt="Basketball" className="w-full h-64 object-cover group-hover:scale-105 transition-transform duration-500" />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent flex items-end p-6">
+                <h3 className="text-white text-2xl font-serif font-bold">Basketball</h3>
+              </div>
+            </div>
+            
+            {/* Esports */}
+            <div className="group relative overflow-hidden rounded-xl shadow-md hover:shadow-xl transition-all duration-300">
+              <img src={images.esports} alt="Esports" className="w-full h-64 object-cover group-hover:scale-105 transition-transform duration-500" />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent flex items-end p-6">
+                <h3 className="text-white text-2xl font-serif font-bold">Esports</h3>
+              </div>
+            </div>
+            
+            {/* Betting Options 1 */}
+            <div className="group relative overflow-hidden rounded-xl shadow-md hover:shadow-xl transition-all duration-300">
+              <img src={images.betting1} alt="Live Betting" className="w-full h-64 object-cover group-hover:scale-105 transition-transform duration-500" />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent flex items-end p-6">
+                <h3 className="text-white text-2xl font-serif font-bold">Live Betting</h3>
+              </div>
+            </div>
+            
+            {/* Betting Options 2 */}
+            <div className="group relative overflow-hidden rounded-xl shadow-md hover:shadow-xl transition-all duration-300">
+              <img src={images.betting2} alt="Exchange Platform" className="w-full h-64 object-cover group-hover:scale-105 transition-transform duration-500" />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent flex items-end p-6">
+                <h3 className="text-white text-2xl font-serif font-bold">Exchange Platform</h3>
+              </div>
+            </div>
+          </div>
+        </div>
       </section>
 
       {/* Enrollment and Step Walkthrough Engine Grid */}

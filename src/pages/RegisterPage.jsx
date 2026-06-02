@@ -54,7 +54,14 @@ export default function RegisterPage() {
         </div>
 
         {/* Right Side - Reddybook Information */}
-        <div className="flex-1 bg-gradient-to-br from-[#1a1a2e] to-[#16213e] p-8 flex flex-col justify-center overflow-y-auto">
+        <div className="flex-1 bg-gradient-to-br from-[#1a1a2e] to-[#16213e] p-8 flex flex-col justify-center overflow-y-auto relative">
+          <img
+            src="/Register Banner.webp"
+            alt="Reddy Book register banner"
+            className="absolute inset-0 w-full h-full object-cover opacity-15"
+          />
+          <div className="absolute inset-0 bg-gradient-to-br from-[#1a1a2e]/95 to-[#16213e]/95" />
+          <div className="relative z-10">
           
           {/* Get Your Reddybook ID Section */}
           <div className="mb-6">
@@ -66,6 +73,15 @@ export default function RegisterPage() {
               The initial stage in order to gain access to the platform is to create your Reddybook ID. 
               This ID is your individual entry point and enables you to access any features without limitations.
             </p>
+          </div>
+
+          {/* Register P1 IMAGE 1 */}
+          <div className="mb-6">
+            <img 
+              src="/Register P1 IMAGE 1.webp" 
+              alt="Registration Process" 
+              className="w-full h-auto rounded-lg shadow-md border border-[#cca04c]/30"
+            />
           </div>
 
           {/* Registration Steps */}
@@ -87,6 +103,15 @@ export default function RegisterPage() {
             </ul>
           </div>
 
+          {/* Register P3 IMAGE 2 */}
+          <div className="mb-6">
+            <img 
+              src="/Register P3 IMAGE 2.webp" 
+              alt="Login Details" 
+              className="w-full h-auto rounded-lg shadow-md border border-[#cca04c]/30"
+            />
+          </div>
+
           {/* Benefits with Active ID */}
           <div className="mb-6 p-4 bg-[#1a1a2e] rounded-lg border border-[#cca04c]/30">
             <h3 className="text-md font-semibold mb-3 text-[#cca04c]">With an active ID, you will be able to:</h3>
@@ -104,11 +129,29 @@ export default function RegisterPage() {
             </div>
           </div>
 
+          {/* Register P4 IMAGE 3 */}
+          <div className="mb-6">
+            <img 
+              src="/Register P4 IMAGE 3.webp" 
+              alt="Account Benefits" 
+              className="w-full h-auto rounded-lg shadow-md border border-[#cca04c]/30"
+            />
+          </div>
+
           {/* Easy for Beginners Note */}
           <div className="mb-6 p-3 bg-[#cca04c]/10 rounded-lg border border-[#cca04c]/20">
             <p className="text-sm text-gray-300 text-center">
               ✨ It is structured in a way that it is easy to use by beginners and even new users can start-off with ease. ✨
             </p>
+          </div>
+
+          {/* Register P5 IMAGE 4 */}
+          <div className="mb-6">
+            <img 
+              src="/Register P5 IMAGE 4.webp" 
+              alt="Easy to Use Platform" 
+              className="w-full h-auto rounded-lg shadow-md border border-[#cca04c]/30"
+            />
           </div>
 
           {/* Reddybook Login Section */}
@@ -156,12 +199,41 @@ export default function RegisterPage() {
             </div>
           </div>
 
+          {/* Register P7 IMAGE 5 */}
+          <div className="mb-6">
+            <img 
+              src="/Register P7 IMAGE 5.webp" 
+              alt="Login Benefits" 
+              className="w-full h-auto rounded-lg shadow-md border border-[#cca04c]/30"
+            />
+          </div>
+
+          {/* Register P7 IMAGE 5 (2) */}
+          <div className="mb-6">
+            <img 
+              src="/Register P7 IMAGE 5 (2).webp" 
+              alt="Platform Features" 
+              className="w-full h-auto rounded-lg shadow-md border border-[#cca04c]/30"
+            />
+          </div>
+
           {/* Security Note */}
           <div className="mt-2 p-3 bg-red-900/30 rounded-lg border border-red-700/50">
             <p className="text-xs text-gray-300 leading-relaxed">
               <span className="font-bold text-[#cca04c]">🔒 Security Note:</span> The system is streamlined to offer real-time access to make the entire experience seamless and easy. 
               Always ensure that your login credentials are secure and not shared with others.
             </p>
+          </div>
+
+          {/* Register last image */}
+          <div className="mt-6">
+            <img 
+              src="/Register last image.webp" 
+              alt="Secure Platform" 
+              className="w-full h-auto rounded-lg shadow-md border border-[#cca04c]/30"
+            />
+          </div>
+
           </div>
         </div>
       </div>

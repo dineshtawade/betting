@@ -10,6 +10,13 @@ export default function Terms() {
     <div className="min-h-screen bg-[#f8f8f8] text-[#111]">
       <div className="max-w-5xl mx-auto px-4 py-12">
         <div className="bg-white shadow-sm rounded-3xl p-6 md:p-10">
+          <div className="mb-8 overflow-hidden rounded-2xl border border-gray-100">
+            <img
+              src="/Terms and Conditions.webp"
+              alt="Reddy Book Club terms and conditions"
+              className="h-56 w-full object-cover md:h-72"
+            />
+          </div>
 
           <h1 className="text-3xl md:text-5xl font-bold text-[#4a121a] border-b pb-5 mb-8 leading-tight">
             Reddy Book Club Terms and Conditions
@@ -104,6 +111,12 @@ export default function Terms() {
               <h2 className="text-2xl font-semibold text-[#4a121a]">
                 Account Registration, Login and Verification
               </h2>
+              <img
+                src="/Terms and Conditions Banner 2.webp"
+                alt="Account terms and verification"
+                className="h-48 w-full rounded-2xl object-cover"
+                loading="lazy"
+              />
 
               <p>
                 Using Reddy Book Club may involve requesting an ID,

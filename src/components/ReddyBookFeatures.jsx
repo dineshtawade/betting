@@ -134,9 +134,10 @@ const ReddyBookFeatures = () => {
                 {/* Masked elegant overlay representing the card graphics */}
                 <div className="absolute inset-0 bg-gradient-to-t from-[#f4e9d4] via-transparent to-transparent z-10" />
                 <img 
-                  src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=300&q=80" 
+                  src="/Homepage Image 13 & 14 (2).webp" 
                   alt="System Representative graphic" 
                   className="w-full h-full object-cover opacity-80 mix-blend-luminosity grayscale contrast-125"
+                  loading="lazy"
                 />
               </div>
 

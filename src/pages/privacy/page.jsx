@@ -10,6 +10,13 @@ export default function PrivacyPolicy() {
     <div className="min-h-screen bg-[#f8f8f8] text-[#111]">
       <div className="max-w-5xl mx-auto px-4 py-12">
         <div className="bg-white shadow-sm rounded-3xl p-6 md:p-12">
+          <div className="mb-8 overflow-hidden rounded-2xl border border-gray-100">
+            <img
+              src="/Privacy Policy Banner 1.webp"
+              alt="Reddy Book Club privacy policy"
+              className="h-56 w-full object-cover md:h-72"
+            />
+          </div>
 
           <h1 className="text-4xl md:text-5xl font-semibold leading-tight text-[#4a121a]">
             Reddy Book Club Privacy Policy
@@ -299,6 +306,12 @@ export default function PrivacyPolicy() {
               <h2 className="text-2xl font-semibold text-[#4a121a]">
                 Data Security and Retention
               </h2>
+              <img
+                src="/Privacy Policy Banner 2.webp"
+                alt="Data security and privacy"
+                className="h-48 w-full rounded-2xl object-cover"
+                loading="lazy"
+              />
 
               <p>
                 We use reasonable technical and organisational measures to help

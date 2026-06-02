@@ -9,6 +9,13 @@ export default function ResponsibleGaming() {
   return (
     <div className="p-4 md:p-12 max-w-4xl mx-auto">
       <div className="bg-white shadow-sm rounded-lg p-6 md:p-10">
+        <div className="mb-8 overflow-hidden rounded-lg border border-gray-100">
+          <img
+            src="/Responsible gaming banner 2.webp"
+            alt="Reddy Book Club responsible gaming"
+            className="h-56 w-full object-cover md:h-72"
+          />
+        </div>
 
         <h1 className="text-3xl md:text-4xl font-extrabold text-[#4a121a] mb-8 border-b pb-4 tracking-tight">
           Reddy Book Club Responsible Gaming Guide: Play With Control and Know When to Stop
@@ -161,6 +168,12 @@ export default function ResponsibleGaming() {
             <h2 className="text-2xl font-bold text-[#4a121a]">
               Practical tools to stay in control
             </h2>
+            <img
+              src="/Reponsible Gaming.webp"
+              alt="Responsible gaming tools"
+              className="h-48 w-full rounded-lg object-cover"
+              loading="lazy"
+            />
 
             <h3 className="text-xl font-semibold">
               Set deposit limits before you play

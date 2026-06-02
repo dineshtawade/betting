@@ -14,6 +14,13 @@ export default function CustomerCare() {
       <div className="max-w-5xl mx-auto px-4 py-12 space-y-10">
 
         <div className="bg-white shadow-sm rounded-3xl p-8 md:p-12">
+          <div className="mb-8 overflow-hidden rounded-2xl border border-gray-100">
+            <img
+              src="/Customer Care banner 1.webp"
+              alt="Reddy Book Club customer care"
+              className="h-56 w-full object-cover md:h-72"
+            />
+          </div>
 
           <div className="space-y-6">
             <span className="text-sm uppercase tracking-[0.3em] text-[#a60a27]">
@@ -38,6 +45,15 @@ export default function CustomerCare() {
               <h2 className="text-2xl font-semibold text-[#4a121a]">
                 Reddy Book Club Customer Care
               </h2>
+
+              {/* Terms and Conditions Banner 2 */}
+              <div className="my-6 overflow-hidden rounded-2xl border border-gray-100">
+                <img
+                  src="/Terms and Conditions Banner 2.webp"
+                  alt="Terms and Conditions"
+                  className="w-full h-auto object-cover rounded-2xl"
+                />
+              </div>
 
               <p>
                 If you need help with your account, Cricket ID, login, deposits,
@@ -66,10 +82,27 @@ export default function CustomerCare() {
               </p>
             </section>
 
+            {/* Terms and Conditions Section */}
+            <section className="space-y-4">
+              <div className="my-6 overflow-hidden rounded-2xl border border-gray-100">
+                <img
+                  src="/Terms and Conditions.webp"
+                  alt="Terms and Conditions Details"
+                  className="w-full h-auto object-cover rounded-2xl"
+                />
+              </div>
+            </section>
+
             <section className="space-y-4">
               <h2 className="text-2xl font-semibold text-[#4a121a]">
                 How to Contact Reddy Book Club Customer Care
               </h2>
+              <img
+                src="/Customer Care Banner 2.webp"
+                alt="Customer care support channels"
+                className="h-48 w-full rounded-2xl object-cover"
+                loading="lazy"
+              />
 
               <p>
                 Customer care should be easy to find and simple to use.
@@ -206,14 +239,14 @@ export default function CustomerCare() {
               </h3>
 
               <p>
-                Instead of sending “hello” and waiting, explain the problem clearly
+                Instead of sending "hello" and waiting, explain the problem clearly
                 in your first message.
               </p>
 
               <div className="bg-[#faf9f5] border rounded-2xl p-5 italic">
-                “I can log in, but my withdrawal from today is still pending.
+                "I can log in, but my withdrawal from today is still pending.
                 My username is [username], the request was made at [time],
-                and the amount is [amount].”
+                and the amount is [amount]."
               </div>
 
               <h3 className="text-xl font-semibold">

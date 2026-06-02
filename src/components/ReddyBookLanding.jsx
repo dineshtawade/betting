@@ -52,6 +52,14 @@ const ReddyBookLanding = () => {
         {/* Right Side: Visual Promotional Card */}
         <div className="w-full md:w-[380px] lg:w-[410px] sm:max-w-md sm:mx-auto md:mx-0 flex-shrink-0 mt-4 md:mt-0">
           <div className="bg-gradient-to-br from-[#fffdf9] to-[#f4e9d4] rounded-2xl p-6 sm:p-8 shadow-xl border border-[#ebdcb9] relative overflow-hidden h-full min-h-[520px]">
+            <img
+              src="/Homepage Image 13 & 14 (1).webp"
+              alt="Reddy Book Club platform preview"
+              className="absolute inset-0 w-full h-full object-cover opacity-10 mix-blend-multiply"
+              loading="lazy"
+            />
+            <div className="absolute inset-0 bg-gradient-to-br from-[#fffdf9]/90 via-[#f4e9d4]/90 to-[#faf6eb]/80 pointer-events-none" />
+            <div className="relative z-10">
             
             {/* Top Right Mini Utility Bar */}
             <div className="flex justify-end gap-2 text-[#cbb07c] mb-6">
@@ -106,9 +114,10 @@ const ReddyBookLanding = () => {
                 Learn More
               </button>
 
-              <div className="border border-[#cbb07c] rounded-md px-3.5 py-1 text-xs text-[#7c6643] bg-white/80 font-bold tracking-wide shadow-sm">
+            <div className="border border-[#cbb07c] rounded-md px-3.5 py-1 text-xs text-[#7c6643] bg-white/80 font-bold tracking-wide shadow-sm">
                 reddybookclubs.com
               </div>
+            </div>
             </div>
 
             {/* Vector Decors (Faux 3D Shield/Lock Mockups) */}

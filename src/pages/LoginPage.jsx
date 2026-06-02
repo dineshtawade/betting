@@ -64,11 +64,10 @@ export default function LoginPage() {
     });
   };
 
-  // CLEAN STREAMLINED IMAGE URLS (Fixes the unexpected token crash)
   const bettingImages = [
-    { src: "https://images.unsplash.com/photo-1596838132731-3301c3fd4317?w=150&h=100&fit=crop", alt: "Casino" },
-    { src: "https://images.unsplash.com/photo-1606761568499-6d2451b23c66?w=150&h=100&fit=crop", alt: "Sports Betting" },
-    { src: "https://images.unsplash.com/photo-1595435934249-5df7ed86e1c0?w=150&h=100&fit=crop", alt: "Tennis" }
+    { src: "/Login P1 IMAGE 1.webp", alt: "Casino" },
+    { src: "/Login P2 IMAGE2.webp", alt: "Sports Betting" },
+    { src: "/Login P4 IMAGE 3.webp", alt: "Tennis" }
   ];
 
   return (
@@ -152,7 +151,14 @@ export default function LoginPage() {
         </div>
 
         {/* Right Side: Visual Info Panel */}
-        <div className="flex-1 bg-gradient-to-br from-[#0c4a34] to-[#062c1e] p-6 sm:p-10 flex flex-col justify-center text-white overflow-y-auto">
+        <div className="flex-1 bg-gradient-to-br from-[#0c4a34] to-[#062c1e] p-6 sm:p-10 flex flex-col justify-center text-white overflow-y-auto relative">
+          <img
+            src="/Login Banner.webp"
+            alt="Reddy Book login banner"
+            className="absolute inset-0 w-full h-full object-cover opacity-15"
+          />
+          <div className="absolute inset-0 bg-gradient-to-br from-[#0c4a34]/95 to-[#062c1e]/95" />
+          <div className="relative z-10">
           
           {/* Internal Game Matrix Block */}
           <div className="mb-6">
@@ -201,12 +207,23 @@ export default function LoginPage() {
               Our framework is fully streamlined to execute live calculations across checking account balance tallies, adding liquidity margins, manual withdrawal parameters, and cross-feature routing. Never leak system variables to third party entities.
             </p>
           </div>
+          </div>
         </div>
       </div>
 
       {/* 2. Secondary Editorial Content Area Container */}
       <main className="w-full max-w-6xl mx-auto mt-12 bg-white rounded-2xl shadow-lg p-6 sm:p-10 border border-gray-200/60 space-y-10 text-gray-700 text-sm md:text-base leading-relaxed font-light">
         
+        {/* Login P6 IMAGE 4 - After main container */}
+        <div className="mb-4 overflow-hidden rounded-2xl">
+          <img 
+            src="/Login P6 IMAGE 4.webp" 
+            alt="Login Overview"
+            className="w-full h-auto object-cover rounded-2xl"
+            loading="lazy"
+          />
+        </div>
+
         {/* Document Introductory Block */}
         <section className="space-y-4">
           <h1 className="text-2xl sm:text-4xl font-serif font-black text-gray-900 tracking-tight leading-tight">
@@ -224,6 +241,16 @@ export default function LoginPage() {
             <p>Use Reddy Book Club only if you meet the required age limit and local rules allow access in your location. Never use betting or gaming platforms with borrowed details, fake accounts, or money you cannot afford to lose.</p>
           </div>
         </section>
+
+        {/* Login P8 IMAGE 5 - After introductory block */}
+        <div className="my-6 overflow-hidden rounded-2xl">
+          <img 
+            src="/Login P8 IMAGE 5.webp" 
+            alt="Login Security Guide"
+            className="w-full h-auto object-cover rounded-2xl border border-gray-100"
+            loading="lazy"
+          />
+        </div>
 
         {/* Index Utility Block */}
         <section className="bg-gray-50 border border-gray-200 rounded-xl p-4 sm:p-6 max-w-md">
@@ -245,7 +272,7 @@ export default function LoginPage() {
             The Reddy Book login page is the account access page for existing users of Reddy Book Club. Once you enter your username and password, you can reach your account dashboard and use the features connected to your cricket ID.
           </p>
           <p>
-            For many users, a <span className="font-medium text-gray-900">“cricket ID”</span> is the account credential used to access cricket markets, live sports options, casino-style games, and account tools. Some people search for the same thing using terms like <span className="italic font-normal">reddy book club, reddybook club, reddy anna login, reddy anna book login, or reddy book login</span>. The wording may differ, but the user intent is usually the same: they want a safe and working login route.
+            For many users, a <span className="font-medium text-gray-900">"cricket ID"</span> is the account credential used to access cricket markets, live sports options, casino-style games, and account tools. Some people search for the same thing using terms like <span className="italic font-normal">reddy book club, reddybook club, reddy anna login, reddy anna book login, or reddy book login</span>. The wording may differ, but the user intent is usually the same: they want a safe and working login route.
           </p>
           <p className="bg-gray-50 p-3 rounded text-xs font-medium text-gray-600 border-l-2 border-gray-400">
             📌 <span className="font-bold">Clarification:</span> This is not a physical cricket club near me page. It is an online account login guide for users who already have Reddy Book Club access.
@@ -294,7 +321,7 @@ export default function LoginPage() {
             <div className="flex gap-4 items-start">
               <span className="w-6 h-6 rounded-full bg-[#004b93] text-white flex items-center justify-center text-xs font-bold shrink-0 mt-0.5">4</span>
               <div>
-                <h4 className="font-bold text-gray-900 text-sm sm:text-base">Step 4: Click the “Login” Button</h4>
+                <h4 className="font-bold text-gray-900 text-sm sm:text-base">Step 4: Click the "Login" Button</h4>
                 <p className="text-xs sm:text-sm text-gray-600 mt-0.5">Once the details are correct, click the Login button. You should be redirected to your account dashboard. From there, existing eligible users can access available account sections, check balance information, review markets, and manage account activity where the service is available.</p>
               </div>
             </div>
@@ -316,6 +343,16 @@ export default function LoginPage() {
             <div className="p-2 bg-white rounded shadow-xs">Always tap log-out explicitly on shared hardware.</div>
           </div>
         </section>
+
+        {/* Login P9.2 IMAGE 6 - After steps section */}
+        <div className="my-6 overflow-hidden rounded-2xl">
+          <img 
+            src="/Login P9.2 IMAGE 6.webp" 
+            alt="Login Step Guide"
+            className="w-full h-auto object-cover rounded-2xl border border-gray-100"
+            loading="lazy"
+          />
+        </div>
 
         {/* Section: Distinctions */}
         <section className="space-y-4 pt-4 border-t border-gray-100">
@@ -389,7 +426,7 @@ export default function LoginPage() {
         <section id="safety-tips" className="space-y-4 pt-4 border-t border-gray-100">
           <h3 className="text-xl sm:text-2xl font-serif font-bold text-gray-900">Account Safety Tips Before You Login</h3>
           <p>Your Reddy Book Club account should be treated like any other account that contains personal or financial activity. A few simple habits can prevent most problems.</p>
-          <p>Use a strong password that is not used on other websites. Do not share your login with friends, agents, groups, or anyone claiming they can “manage” your account. No one should ask for your password to help you win.</p>
+          <p>Use a strong password that is not used on other websites. Do not share your login with friends, agents, groups, or anyone claiming they can "manage" your account. No one should ask for your password to help you win.</p>
           <p>Be careful with similar names. Searches such as <span className="font-medium text-gray-900">reddy anna club, reddy anna book club, reddyanna, book777, reddy kings login, or reddy anna book login</span> may point to different websites, clone pages, or unrelated brands. Always confirm that you are logging into the correct Reddy Book Club account.</p>
           
           <div className="p-5 bg-red-950 text-white rounded-xl space-y-3 shadow-md border-b-4 border-red-700">

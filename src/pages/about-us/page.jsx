@@ -13,6 +13,13 @@ export default function About() {
     <div className="min-h-screen bg-[#f8f8f8] text-[#111]">
       <div className="max-w-5xl mx-auto px-4 py-12 space-y-10">
         <div className="bg-white shadow-sm rounded-3xl p-8 md:p-12">
+          <div className="mb-8 overflow-hidden rounded-2xl border border-gray-100">
+            <img
+              src="/About Banner.webp"
+              alt="About Reddy Book Club"
+              className="h-56 w-full object-cover md:h-72"
+            />
+          </div>
 
           <div className="space-y-6">
             <span className="text-sm uppercase tracking-[0.3em] text-[#a60a27]">
@@ -62,6 +69,12 @@ export default function About() {
             </section>
 
             <section className="space-y-4">
+              <img
+                src="/About Banner 2.webp"
+                alt="Reddy Book Club platform overview"
+                className="mb-6 h-48 w-full rounded-2xl object-cover"
+                loading="lazy"
+              />
               <h2 className="text-2xl font-semibold text-[#4a121a]">
                 What Is Reddy Book Club?
               </h2>
