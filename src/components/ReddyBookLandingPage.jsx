@@ -3,31 +3,22 @@ import {
   Menu, 
   X, 
   Check, 
-  Award, 
   Smartphone, 
   Globe, 
   User, 
-  Lock, 
   Download, 
-  Star, 
   HelpCircle,
-  TrendingUp,
   ArrowRight,
   ChevronDown,
   ChevronUp,
-  Wallet,
   ArrowDownLeft,
   ArrowUpRight,
   ShieldCheck,
-  Users,
-  Layers,
   Sparkles,
   Trophy,
   Gamepad2,
   Zap
 } from 'lucide-react';
-import ReddyBookLanding from './ReddyBookLanding';
-import ReddyBookFeatures from './ReddyBookFeatures';
 
 const ReddyBookClubPage = () => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -57,40 +48,6 @@ const ReddyBookClubPage = () => {
     betting: "/Homepage Image 13 & 14.webp"
   };
 
-  // Sports category images from web (high-quality free stock images)
-  const webSportsImages = [
-    {
-      url: "https://images.unsplash.com/photo-1531415074968-036ba1b575da?w=600&h=400&fit=crop",
-      name: "Cricket",
-      alt: "Cricket match action"
-    },
-    {
-      url: "https://images.unsplash.com/photo-1522778119026-d647f0596c20?w=600&h=400&fit=crop",
-      name: "Football",
-      alt: "Football stadium action"
-    },
-    {
-      url: "https://images.unsplash.com/photo-1546519638-68e109498ffc?w=600&h=400&fit=crop",
-      name: "Basketball",
-      alt: "Basketball game"
-    },
-    // {
-    //   url: "https://images.unsplash.com/photo-1542751371-adc38448a05e?w=600&h=400&fit=crop",
-    //   name: "Esports",
-    //   alt: "Esports tournament"
-    // },
-    // {
-    //   url: "https://images.unsplash.com/photo-1601924582970-9238bcb495d9?w=600&h=400&fit=crop",
-    //   name: "Tennis",
-    //   alt: "Tennis match"
-    // },
-    // {
-    //   url: "https://images.pexels.com/photos/270404/pexels-photo-270404.jpeg?w=600&h=400&fit=crop",
-    //   name: "Casino",
-    //   alt: "Casino games"
-    // }
-  ];
-
   const faqs = [
     { q: "What is Reddy Book Club and how does it work?", a: "Reddy Book Club is an online platform, where a user can access services using a mobile app, or web interface. Individuals are allowed to subscribe to the site, finish the reddybook sign-in, and begin utilizing the capabilities immediately. The site is made to be straightforward and easy to use, and both new and experienced users can easily use the site. There are a number of individuals who visit the site to find the reddybook club or reddyanna with the aim of accessing the site easily and conveniently." },
     { q: "What is Reddybook and why is it so popular?", a: "Reddybook is the online name of Reddy Book Club and is extensively searched by people who are seeking a good online source. Ease of navigation, easy way of logging in and easy user experience are the reasons why reddybook is popular. It is also known as reddybook club and this is an indication of its increasing popularity with the users." },
@@ -99,7 +56,7 @@ const ReddyBookClubPage = () => {
     { q: "What is the club of Reddy Anna and why is it trending?", a: "Reddy anna club is a commonly searched term related to Reddy Book Club. It symbolizes the increasing community and popularity of the platform. Online, many users can be found using the platform under the name of reddy anna club, which in turn makes it a significant keyword related to the brand." },
     { q: "What is Reddy Anna Book Club?", a: "The other variant of the platform name that is used by users is Reddy anna book club. It is known as reddy book club. The presence of various names such as reddyanna, reddybook and reddy anna book club demonstrates the commonality with which the platform is used among various audiences." },
     { q: "What is the safest way to download Reddy Book Club APK?", a: "To download the reddy book club apk, users should always use a trusted and verified source. Once the APK file has been downloaded, the file can be installed into an Android device. The reddy book club apk enables users to access the platform without having to use an app store. Never use unverified links, always be careful." },
-    { q: "What is Reddy Book Club APK and why do we use it?", a: "Baddy book club apk is an Android apk file that enables the user to manually install the application. It is convenient to the users who require fast access to the platform without necessarily going to app stores. The APK approach is popular due to its flexibility and quicker updates." },
+    { q: "What is Reddy Book Club APK and why do we use it?", a: "Baddy book club apk is an Android apk file that enables the user to manually install the application. It is convenient to the users who need fast access to the platform without necessarily going to app stores. The APK approach is popular due to its flexibility and quicker updates." },
     { q: "Is Reddybook safe and secure to use?", a: "Reddybook can be safely used in case of trusted sources. Users are advised to ensure their reddybook login details are not left unattended and they should not give out personal details. Security is user-based and thus it is better to remain vigilant whenever using any online platform." },
     { q: "Will I be able to access Reddybook online without APK?", a: "Yes, without downloading the reddy book club apk, the users can access reddybook online. It is browser-based and has the option of logging in and making use of features on the platform. This renders reddybook club adaptable and available across several gadgets." },
     { q: "What is making Reddybook club popular?", a: "Reddybook club is becoming popular due to its ease of use, fast access, and easy use. Consumers would choose sites that are user friendly and reddy book club provides them with that. Its growing demand is also demonstrated by the growing number of searches using the keyword reddyanna and similar to it." },
@@ -154,7 +111,7 @@ const ReddyBookClubPage = () => {
               <a href="#home" className="block py-2 px-4 hover:bg-[#f4e9d4]/40 rounded-lg">Home</a>
               <a href="#about" className="block py-2 px-4 hover:bg-[#f4e9d4]/40 rounded-lg">About</a>
               <a href="#features" className="block py-2 px-4 hover:bg-[#f4e9d4]/40 rounded-lg">Features</a>
-              <a href="#terminal" className="block py-2 px-4 hover:bg-[#f4e9d4]/40 rounded-lg">Terminal Terminal</a>
+              <a href="#terminal" className="block py-2 px-4 hover:bg-[#f4e9d4]/40 rounded-lg">Terminal</a>
               <div className="pt-2 px-4">
                 <a href="#terminal" className="block text-center w-full bg-gradient-to-b from-[#ffd726] to-[#e0a100] py-3 rounded-md font-extrabold text-black text-sm border border-[#cca300]">
                   Get Your Reddybook ID
@@ -165,7 +122,7 @@ const ReddyBookClubPage = () => {
         </div>
       </nav>
 
-      {/* Main Luxury Hero Banner */}
+      {/* Main Hero Section */}
       <header id="home" className="relative min-h-[90vh] flex items-center pt-8 border-b border-[#ebdcb9]">
         <div className="absolute inset-0 z-0">
           <img 
@@ -183,13 +140,14 @@ const ReddyBookClubPage = () => {
               <span className="text-xs font-bold tracking-wider uppercase">Welcome to Reddy Book Club</span>
             </div>
 
-            <h1 className="text-4xl sm:text-5xl md:text-7xl font-serif font-black leading-[1.1] text-gray-900 tracking-tight mb-4">
+            <h1 className="text-3xl sm:text-4xl md:text-6xl font-serif font-black leading-[1.1] text-gray-900 tracking-tight mb-4">
               Reddy Book Club to Reddybook, <br />
               <span className="bg-gradient-to-r from-[#b38f46] via-[#e2c175] to-[#96732b] bg-clip-text text-transparent">Login, APK Download & Online Platform</span>
             </h1>
 
-            <p className="text-base sm:text-xl text-gray-600 mb-8 font-light leading-relaxed max-w-3xl">
-              In the rapidly changing digitalized world, people are always seeking platforms that will provide them with ease, speed and accessibility. Reddy Book club has become a common name among the users seeking a legitimate and convenient online experience.
+            <p className="text-base sm:text-lg text-gray-600 mb-8 font-light leading-relaxed max-w-3xl">
+              In the rapidly changing digitalized world, people are always seeking platforms that will provide them with ease, speed and accessibility. 
+              Reddy Book club has become a common name among the users seeking a legitimate and convenient online experience.
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4">
@@ -204,306 +162,283 @@ const ReddyBookClubPage = () => {
         </div>
       </header>
 
-      {/* Numerical Trust Milestones Bar */}
-      <section className="py-8 bg-white border-b border-[#ebdcb9] shadow-xs">
-        <div className="container mx-auto px-4 sm:px-6 grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
-          {[
-            { number: "1.8L+", label: "Active Listed Bettors" },
-            { number: "450+", label: "Live Exchange Modules" },
-            { number: "₹85Cr+", label: "Settled This Month" },
-            { number: "4.9 / 5", label: "User Trust Standing" },
-          ].map((stat, i) => (
-            <div key={i}>
-              <div className="text-2xl sm:text-4xl font-serif font-black text-gray-900">{stat.number}</div>
-              <div className="text-[#968059] text-xs font-bold tracking-wide uppercase mt-0.5">{stat.label}</div>
-            </div>
-          ))}
-        </div>
-      </section>
-
-      {/* Image 1 - Homepage Image 5 after milestones */}
-      <section className="py-8 bg-[#faf6eb] border-b border-[#ebdcb9]">
-        <div className="container mx-auto px-4 sm:px-6 max-w-5xl">
-          <div className="overflow-hidden rounded-xl shadow-lg">
-            <img 
-              src={images.cricket} 
-              alt="Cricket betting platform" 
-              className="w-full h-auto object-cover"
-            />
-          </div>
-        </div>
-      </section>
-
-      {/* Overview Contextual Article Block */}
-      <section id="about" className="py-16 sm:py-24 bg-[#fffdf9] border-b border-[#ebdcb9]">
-        <div className="container mx-auto px-4 sm:px-6 max-w-5xl">
-          <div className="grid grid-cols-1 md:grid-cols-12 gap-8 items-start">
-            <div className="md:col-span-8 space-y-6">
-              <h2 className="text-xs font-bold tracking-widest text-[#968059] uppercase">Platform Overview</h2>
-              <h3 className="text-3xl font-serif font-bold text-gray-900 leading-tight">What is Reddy Book Club?</h3>
-              <p className="text-gray-600 font-light text-base md:text-lg leading-relaxed">
-                Reddy Book Club is an online solution where the user can avail the services using a mobile and web-based system. It is geared towards simplicity, efficiency, and ease of use to all forms of users. 
+      {/* Introduction Section */}
+      <section id="about" className="py-16 sm:py-20 bg-white border-b border-[#ebdcb9]">
+        <div className="container mx-auto px-4 sm:px-6 max-w-6xl">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 items-center">
+            <div className="space-y-5 order-2 lg:order-1">
+              <h2 className="text-xs font-bold tracking-widest text-[#968059] uppercase">About Reddy Book Club</h2>
+              <h3 className="text-2xl sm:text-3xl font-serif font-bold text-gray-900 leading-tight">What is Reddy Book Club?</h3>
+              <p className="text-gray-600 font-light text-base leading-relaxed">
+                Reddy Book Club is an online solution where the user can avail the services using a mobile and web-based system. 
+                It is geared towards simplicity, efficiency, and ease of use to all forms of users.
               </p>
-              
-              {/* Image 2 - Homepage Image 7 */}
-              <div className="my-6 overflow-hidden rounded-xl shadow-md">
-                <img 
-                  src={images.football} 
-                  alt="Football betting options" 
-                  className="w-full h-auto object-cover"
-                />
+              <p className="text-gray-600 font-light text-base leading-relaxed">
+                A good number of users type in reddybook club or reddyanna in search of a platform where they can access without needless complication. 
+                Reddy Book Club serves this purpose by providing a simplistic interface that aids in navigating with ease.
+              </p>
+              <p className="text-gray-600 font-light text-base leading-relaxed">
+                The site is designed in such a way that it is easy to use and one can create an account, log in and navigate without any hassle.
+              </p>
+            </div>
+            <div className="order-1 lg:order-2">
+              <div className="overflow-hidden rounded-xl shadow-lg">
+                <img src={images.cricket} alt="Reddy Book Club" className="w-full h-72 lg:h-96 object-cover hover:scale-105 transition-transform duration-500" />
               </div>
-              
-              <p className="text-gray-600 font-light text-base md:text-lg leading-relaxed">
-                Be it in the process of trying to find the login to reddybook, or trying to find the apk of the reddy book club, or simply trying to find out what the reddybook club is, this site is created in such a way that it may be convenient and usable. The increased popularity of <span className="font-medium text-gray-900">reddy anna club</span> and <span className="font-medium text-gray-900">reddy anna book club</span> indicates that users are moving to websites that provide easy navigation and fast access. 
-              </p>
-              
-              {/* Image 3 - Homepage Image 9 */}
-              <div className="my-6 overflow-hidden rounded-xl shadow-md">
-                <img 
-                  src={images.basketball} 
-                  alt="Basketball betting markets" 
-                  className="w-full h-auto object-cover"
-                />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Get Your Reddybook ID Section */}
+      <section className="py-16 sm:py-20 bg-[#faf6eb] border-b border-[#ebdcb9]">
+        <div className="container mx-auto px-4 sm:px-6 max-w-6xl">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 items-center">
+            <div className="order-2 lg:order-1">
+              <div className="overflow-hidden rounded-xl shadow-lg">
+                <img src={images.football} alt="Get Reddybook ID" className="w-full h-72 lg:h-96 object-cover hover:scale-105 transition-transform duration-500" />
               </div>
-              
-              <p className="text-gray-600 font-light text-base md:text-lg leading-relaxed">
-                Being digitally robust, reddybook still draws more users seeking a trustworthy and user-friendly interface. A good number of users type in reddybook club or reddyanna in search of a platform where they can access without needless complication. Reddy Book Club serves this purpose by providing a simplistic interface that aids in navigating with ease.
-              </p>
             </div>
-            
-            <div className="md:col-span-4 bg-[#faf6eb] p-6 rounded-xl border border-[#ebdcb9] space-y-4 shadow-sm mt-6 md:mt-8">
-              <h4 className="font-serif font-bold text-gray-900 text-lg">Community Trend</h4>
-              <p className="text-xs text-gray-500 leading-relaxed font-light">
-                Search trends demonstrate that the brand is receiving a high degree of recognition and trust across various public naming variants:
+            <div className="space-y-5 order-1 lg:order-2">
+              <h3 className="text-2xl sm:text-3xl font-serif font-bold text-gray-900 leading-tight">Get Your Reddybook ID in Minutes</h3>
+              <p className="text-gray-600 font-light text-base leading-relaxed">
+                The initial stage in order to gain access to the platform is to create your Reddybook ID. 
+                This ID is your individual entry point and enables you to access any features without limitations.
               </p>
-              <ul className="space-y-2 text-xs font-semibold text-[#7c6643]">
-                <li className="flex items-center gap-2">✓ reddy anna club</li>
-                <li className="flex items-center gap-2">✓ reddy anna book club</li>
-                <li className="flex items-center gap-2">✓ reddybook club</li>
-                <li className="flex items-center gap-2">✓ reddyanna portals</li>
-              </ul>
+              <div className="bg-white p-5 rounded-xl border border-[#ebdcb9]">
+                <h4 className="font-bold text-gray-900 mb-3">Simple steps to get started:</h4>
+                <ul className="space-y-2">
+                  <li className="flex items-center gap-2"><Check size={16} className="text-green-600" /> Finish the fast registration procedure.</li>
+                  <li className="flex items-center gap-2"><Check size={16} className="text-green-600" /> Get your login details</li>
+                  <li className="flex items-center gap-2"><Check size={16} className="text-green-600" /> Log in to your account with reddybook.</li>
+                </ul>
+              </div>
+              <div className="grid grid-cols-2 gap-3">
+                <div className="flex items-center gap-2"><Check size={16} className="text-green-600" /> Control your account any time</div>
+                <div className="flex items-center gap-2"><Check size={16} className="text-green-600" /> Deposit funds instantly</div>
+                <div className="flex items-center gap-2"><Check size={16} className="text-green-600" /> Withdraw money smoothly</div>
+                <div className="flex items-center gap-2"><Check size={16} className="text-green-600" /> Browse each feature fully</div>
+              </div>
+              <p className="text-sm text-gray-500 italic">It is structured in a way that it is easy to use by beginners and even new users can start-off with ease.</p>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Structural Placement of ReddyBookLanding */}
-      <section id="features" className="bg-[#faf6eb] border-b border-[#ebdcb9]">
-        <ReddyBookLanding />
-      </section>
-
-      {/* Image 4 - Homepage Image 10 & 11 */}
-      <section className="py-12 bg-white border-b border-[#ebdcb9]">
-        <div className="container mx-auto px-4 sm:px-6 max-w-5xl">
-          <div className="overflow-hidden rounded-xl shadow-lg">
-            <img 
-              src={images.esports} 
-              alt="Esports gaming platform" 
-              className="w-full h-auto object-cover"
-            />
-          </div>
-        </div>
-      </section>
-
-      {/* Sports Categories Section with Web Images */}
+      {/* Reddybook Login Section */}
       <section className="py-16 sm:py-20 bg-white border-b border-[#ebdcb9]">
-        <div className="container mx-auto px-4 sm:px-6">
-          <div className="text-center max-w-2xl mx-auto mb-12">
-            <div className="flex items-center justify-center gap-2 mb-3">
-              <Trophy size={28} className="text-[#b38f46]" />
-              <Zap size={24} className="text-[#e0a100]" />
-              <Gamepad2 size={24} className="text-[#b38f46]" />
+        <div className="container mx-auto px-4 sm:px-6 max-w-6xl">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 items-center">
+            <div className="space-y-5 order-2 lg:order-1">
+              <h3 className="text-2xl sm:text-3xl font-serif font-bold text-gray-900 leading-tight">Reddybook Login – Fast, Secure & Reliable</h3>
+              <p className="text-gray-600 font-light text-base leading-relaxed">
+                The reddybook login procedure is designed to be fast and secure. They can log-in in a few seconds and get access to their accounts without delays.
+              </p>
+              <div className="bg-[#faf6eb] p-5 rounded-xl border border-[#ebdcb9]">
+                <h4 className="font-bold text-gray-900 mb-3">Login steps:</h4>
+                <ul className="space-y-2">
+                  <li className="flex items-center gap-2"><span className="w-5 h-5 bg-[#e0a100] rounded-full flex items-center justify-center text-xs font-bold">1</span> Type in your name or ID.</li>
+                  <li className="flex items-center gap-2"><span className="w-5 h-5 bg-[#e0a100] rounded-full flex items-center justify-center text-xs font-bold">2</span> Enter your password</li>
+                  <li className="flex items-center gap-2"><span className="w-5 h-5 bg-[#e0a100] rounded-full flex items-center justify-center text-xs font-bold">3</span> Click on login</li>
+                </ul>
+              </div>
+              <p className="text-sm text-gray-500">The system is streamlined to offer real-time access to make the entire experience seamless and easy. Always ensure that your login credentials are secure and not shared with others.</p>
             </div>
-            <h2 className="text-3xl font-serif font-bold text-gray-900">Explore Our Sports Categories</h2>
-            <p className="text-sm text-gray-500 mt-2 font-light">Wide range of sports and events available on Reddy Book Club</p>
+            <div className="order-1 lg:order-2">
+              <div className="overflow-hidden rounded-xl shadow-lg">
+                <img src={images.basketball} alt="Login" className="w-full h-72 lg:h-96 object-cover hover:scale-105 transition-transform duration-500" />
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Deposit and Withdrawal Section */}
+      <section className="py-16 sm:py-20 bg-[#faf6eb] border-b border-[#ebdcb9]">
+        <div className="container mx-auto px-4 sm:px-6 max-w-6xl">
+          <div className="text-center max-w-2xl mx-auto mb-12">
+            <h2 className="text-2xl sm:text-3xl font-serif font-bold text-gray-900">Quick & Hassle-Free Transactions</h2>
             <div className="w-16 h-0.5 bg-[#e0a100] mx-auto mt-4"></div>
           </div>
-          
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-            {webSportsImages.map((sport, idx) => (
-              <div key={idx} className="group relative overflow-hidden rounded-xl shadow-md hover:shadow-xl transition-all duration-300">
-                <img 
-                  src={sport.url} 
-                  alt={sport.alt}
-                  className="w-full h-64 object-cover group-hover:scale-105 transition-transform duration-500"
-                  loading="lazy"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/30 to-transparent flex items-end p-6">
-                  <h3 className="text-white text-2xl font-serif font-bold tracking-wide">{sport.name}</h3>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            {/* Deposit */}
+            <div className="bg-white border border-[#ebdcb9] rounded-xl p-6 sm:p-8 shadow-sm hover:shadow-md transition-shadow">
+              <div className="flex items-start gap-4">
+                <div className="p-3 bg-green-50 text-green-700 rounded-xl"><ArrowDownLeft size={24} /></div>
+                <div>
+                  <h3 className="font-serif text-xl font-bold text-gray-900 mb-2">Deposit Money – Quick & Hassle-Free</h3>
+                  <p className="text-gray-600 text-sm">After logging in, you are then prompted to deposit money to your account. Reddy Book Club makes this process easy, quick and safe.</p>
+                  <ul className="mt-4 space-y-2 text-sm">
+                    <li className="flex items-center gap-2"><Check size={14} className="text-green-600" /> Instant processing</li>
+                    <li className="flex items-center gap-2"><Check size={14} className="text-green-600" /> Easy payment methods</li>
+                    <li className="flex items-center gap-2"><Check size={14} className="text-green-600" /> Secure transactions</li>
+                    <li className="flex items-center gap-2"><Check size={14} className="text-green-600" /> Real-time balance updates</li>
+                  </ul>
                 </div>
+              </div>
+            </div>
+
+            {/* Withdrawal */}
+            <div className="bg-white border border-[#ebdcb9] rounded-xl p-6 sm:p-8 shadow-sm hover:shadow-md transition-shadow">
+              <div className="flex items-start gap-4">
+                <div className="p-3 bg-blue-50 text-blue-700 rounded-xl"><ArrowUpRight size={24} /></div>
+                <div>
+                  <h3 className="font-serif text-xl font-bold text-gray-900 mb-2">Withdraw Money – Smooth & Reliable</h3>
+                  <p className="text-gray-600 text-sm">Ease in the withdrawal of money is one of the most crucial attributes of any platform. Reddy Book Club offers a withdrawal system which is easy and safe.</p>
+                  <ul className="mt-4 space-y-2 text-sm">
+                    <li className="flex items-center gap-2"><Check size={14} className="text-green-600" /> Easy request process</li>
+                    <li className="flex items-center gap-2"><Check size={14} className="text-green-600" /> Safe management of finances</li>
+                    <li className="flex items-center gap-2"><Check size={14} className="text-green-600" /> Fast processing time</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* APK and Online Access Section */}
+      <section className="py-16 sm:py-20 bg-white border-b border-[#ebdcb9]">
+        <div className="container mx-auto px-4 sm:px-6 max-w-6xl">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 items-center">
+            <div className="order-2 lg:order-1">
+              <div className="overflow-hidden rounded-xl shadow-lg">
+                <img src={images.esports} alt="APK Download" className="w-full h-72 lg:h-96 object-cover hover:scale-105 transition-transform duration-500" />
+              </div>
+            </div>
+            <div className="space-y-5 order-1 lg:order-2">
+              <h3 className="text-2xl sm:text-3xl font-serif font-bold text-gray-900 leading-tight">Reddy Book Club APK – Easy Download & Installation</h3>
+              <p className="text-gray-600 font-light text-base leading-relaxed">
+                The reddy book club apk is suitable to users who wish to access it using their phones. It enables easy access and direct installation of your account.
+              </p>
+              <div className="bg-[#faf6eb] p-5 rounded-xl border border-[#ebdcb9]">
+                <h4 className="font-bold text-gray-900 mb-3">Why choose APK?</h4>
+                <div className="grid grid-cols-2 gap-2 text-sm">
+                  <span>✓ Faster installation</span>
+                  <span>✓ No app store delays</span>
+                  <span>✓ Easy updates</span>
+                  <span>✓ Smooth performance</span>
+                </div>
+              </div>
+              <div className="bg-[#faf6eb] p-5 rounded-xl border border-[#ebdcb9]">
+                <h4 className="font-bold text-gray-900 mb-3">Installation steps:</h4>
+                <ul className="space-y-2">
+                  <li>1. Get the apk of the reddy book club.</li>
+                  <li>2. Install the file onto your device.</li>
+                  <li>3. Open the app</li>
+                  <li>4. Complete reddybook login</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Reddybook Online Section */}
+      <section className="py-16 sm:py-20 bg-[#faf6eb] border-b border-[#ebdcb9]">
+        <div className="container mx-auto px-4 sm:px-6 max-w-6xl">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 items-center">
+            <div className="space-y-5 order-2 lg:order-1">
+              <h3 className="text-2xl sm:text-3xl font-serif font-bold text-gray-900 leading-tight">Reddybook Online – Access Without Download</h3>
+              <p className="text-gray-600 font-light text-base leading-relaxed">
+                You can also use reddybook online without having to install an app.
+              </p>
+              <div className="bg-white p-5 rounded-xl border border-[#ebdcb9]">
+                <h4 className="font-bold text-gray-900 mb-3">Advantages of going online:</h4>
+                <ul className="space-y-2">
+                  <li className="flex items-center gap-2"><Check size={16} className="text-green-600" /> No installation required</li>
+                  <li className="flex items-center gap-2"><Check size={16} className="text-green-600" /> Works on all devices</li>
+                  <li className="flex items-center gap-2"><Check size={16} className="text-green-600" /> Complete access to every functionality</li>
+                </ul>
+              </div>
+              <p className="text-gray-600">Through the reddybook online, users are free to log in, maintain their accounts, send money and take money at any time. Such a versatility renders the platform very convenient.</p>
+            </div>
+            <div className="order-1 lg:order-2">
+              <div className="overflow-hidden rounded-xl shadow-lg">
+                <img src={images.betting1} alt="Online Access" className="w-full h-72 lg:h-96 object-cover hover:scale-105 transition-transform duration-500" />
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Reddy Anna Club Section */}
+      <section className="py-16 sm:py-20 bg-white border-b border-[#ebdcb9]">
+        <div className="container mx-auto px-4 sm:px-6 max-w-6xl">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 items-center">
+            <div className="order-2 lg:order-1">
+              <div className="overflow-hidden rounded-xl shadow-lg">
+                <img src={images.betting2} alt="Reddy Anna Club" className="w-full h-72 lg:h-96 object-cover hover:scale-105 transition-transform duration-500" />
+              </div>
+            </div>
+            <div className="space-y-5 order-1 lg:order-2">
+              <h3 className="text-2xl sm:text-3xl font-serif font-bold text-gray-900 leading-tight">Reddy Anna Club – A Growing Community</h3>
+              <p className="text-gray-600 font-light text-base leading-relaxed">
+                It has a massive fan base and a robust community that has seen the platform being referred to as reddy anna club.
+              </p>
+              <p className="text-gray-600">Every day more users are joining as it is because:</p>
+              <ul className="space-y-2">
+                <li className="flex items-center gap-2"><Check size={16} className="text-green-600" /> Easy account setup</li>
+                <li className="flex items-center gap-2"><Check size={16} className="text-green-600" /> Fast transactions</li>
+                <li className="flex items-center gap-2"><Check size={16} className="text-green-600" /> Smooth navigation</li>
+              </ul>
+              <p className="text-gray-600">By joining reddy anna club, you are using a platform that is trusted by thousands of users.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Why Choose Reddybook Section */}
+      <section className="py-16 sm:py-20 bg-[#faf6eb] border-b border-[#ebdcb9]">
+        <div className="container mx-auto px-4 sm:px-6 max-w-4xl">
+          <div className="text-center max-w-2xl mx-auto mb-12">
+            <h2 className="text-2xl sm:text-3xl font-serif font-bold text-gray-900">Why Choose Reddybook?</h2>
+            <p className="text-sm text-gray-500 mt-2">Choosing reddybook means choosing a platform that prioritizes ease and performance.</p>
+            <div className="w-16 h-0.5 bg-[#e0a100] mx-auto mt-4"></div>
+          </div>
+
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
+            {[
+              "Quick and secure reddybook login",
+              "Easy installation via reddy book club apk",
+              "Fast deposit system",
+              "Reliable withdrawal process",
+              "Accessible via web and app",
+              "Building community with reddy anna club"
+            ].map((item, idx) => (
+              <div key={idx} className="flex items-center gap-3 p-4 bg-white rounded-xl border border-[#ebdcb9] shadow-sm">
+                <Check size={18} className="text-green-600 shrink-0" />
+                <span className="text-gray-700 text-sm">{item}</span>
               </div>
             ))}
           </div>
-        </div>
-      </section>
 
-      {/* Image 5 - Homepage Image 13 & 14 (1) */}
-      <section className="py-12 bg-[#faf6eb] border-b border-[#ebdcb9]">
-        <div className="container mx-auto px-4 sm:px-6 max-w-5xl">
-          <div className="overflow-hidden rounded-xl shadow-lg">
-            <img 
-              src={images.betting1} 
-              alt="Live betting exchange" 
-              className="w-full h-auto object-cover"
-            />
+          <div className="mt-10 p-5 bg-white rounded-xl border border-yellow-600/20">
+            <h4 className="font-bold text-gray-900 flex items-center gap-2 mb-3">
+              <ShieldCheck size={18} className="text-[#e0a100]" /> Safety & Best Practices
+            </h4>
+            <ul className="space-y-2 text-sm text-gray-600">
+              <li>✓ Download apk file of reddy book club from trusted sources only.</li>
+              <li>✓ Your reddybook username and password are confidential.</li>
+              <li>✓ Avoid sharing sensitive information</li>
+              <li>✓ Update the app regularly</li>
+            </ul>
           </div>
         </div>
       </section>
 
-      {/* Enrollment and Step Walkthrough Engine Grid */}
-      <section className="py-16 sm:py-24 bg-white border-b border-[#ebdcb9]">
-        <div className="container mx-auto px-4 sm:px-6 max-w-6xl">
-          
-          <div className="text-center max-w-2xl mx-auto mb-16">
-            <span className="text-xs font-bold tracking-widest text-[#968059] uppercase block mb-2">Onboarding Flow</span>
-            <h2 className="text-3xl sm:text-4xl font-serif font-bold text-gray-900">Get Your Reddybook ID in Minutes</h2>
-            <p className="text-sm text-gray-500 mt-2 font-light">The initial stage in order to gain access to the platform is to create your Reddybook ID. This ID is your individual entry point and enables you to access any features without limitations.</p>
-            <div className="w-12 h-0.5 bg-[#ebdcb9] mx-auto mt-4"></div>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 items-start mb-16">
-            <div className="bg-[#faf6eb]/50 p-6 rounded-xl border border-[#ebdcb9] space-y-3 shadow-xs">
-              <div className="w-8 h-8 bg-black text-[#ebd18b] rounded-full flex items-center justify-center font-serif font-bold text-sm">1</div>
-              <h3 className="font-serif font-bold text-gray-900 text-lg">Registration</h3>
-              <p className="text-sm text-gray-600 font-light">Finish the fast registration procedure by submitting your simple credential routing parameters to our registry node.</p>
-            </div>
-            
-            <div className="bg-[#faf6eb]/50 p-6 rounded-xl border border-[#ebdcb9] space-y-3 shadow-xs">
-              <div className="w-8 h-8 bg-black text-[#ebd18b] rounded-full flex items-center justify-center font-serif font-bold text-sm">2</div>
-              <h3 className="font-serif font-bold text-gray-900 text-lg">Acquire Details</h3>
-              <p className="text-sm text-gray-600 font-light">Get your verified login details and private passkeys generated instantly via the decentralized agent channel.</p>
-            </div>
-            
-            <div className="bg-[#faf6eb]/50 p-6 rounded-xl border border-[#ebdcb9] space-y-3 shadow-xs">
-              <div className="w-8 h-8 bg-black text-[#ebd18b] rounded-full flex items-center justify-center font-serif font-bold text-sm">3</div>
-              <h3 className="font-serif font-bold text-gray-900 text-lg">Authenticate</h3>
-              <p className="text-sm text-gray-600 font-light">Log in to your account with reddybook and immediately activate full capability without needless technical complications.</p>
-            </div>
-          </div>
-
-          {/* Account Rights Summary Grid Block */}
-          <div className="bg-[#faf6eb] border border-[#ebdcb9] rounded-2xl p-6 sm:p-10 grid grid-cols-1 md:grid-cols-2 gap-8 items-center shadow-sm">
-            <div>
-              <h3 className="font-serif text-2xl font-bold text-gray-900 mb-4">With an active ID, you will be able to:</h3>
-              <p className="text-gray-600 font-light text-sm sm:text-base leading-relaxed mb-6">
-                The platform cuts down on needless complexity, making it easy to use by both novices and advanced users. No complex procedures or lengthy queues.
-              </p>
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 font-semibold text-xs text-gray-800">
-                <div className="flex items-center gap-2"><Check size={14} className="text-green-700" /> Control your account any time</div>
-                <div className="flex items-center gap-2"><Check size={14} className="text-green-700" /> Deposit funds instantly</div>
-                <div className="flex items-center gap-2"><Check size={14} className="text-green-700" /> Withdraw money smoothly</div>
-                <div className="flex items-center gap-2"><Check size={14} className="text-green-700" /> Browse each feature fully</div>
-              </div>
-            </div>
-            
-            <div className="space-y-4 border-t md:border-t-0 md:border-l border-[#ebdcb9] pt-6 md:pt-0 md:pl-8">
-              <span className="text-xs font-bold text-[#968059] uppercase tracking-wide block">Performance Profile</span>
-              <h4 className="text-lg font-serif font-bold text-gray-900">User Centric Design Performance</h4>
-              <p className="text-sm text-gray-600 font-light leading-relaxed">
-                Reddy Book Club is optimized to give a seamless performance on devices. The application software shell and browser mirror layouts are identical and fully synchronized.
-              </p>
-              <div className="flex flex-wrap gap-4 text-xs font-medium text-[#7c6643]">
-                <span>• Fast loading speeds</span>
-                <span>• Responsive structural grid</span>
-                <span>• Regular security updates</span>
-              </div>
-            </div>
-          </div>
-
-        </div>
-      </section>
-
-      {/* Image 6 - Homepage Image 13 & 14 (2) */}
-      <section className="py-12 bg-[#fffdf9] border-b border-[#ebdcb9]">
-        <div className="container mx-auto px-4 sm:px-6 max-w-5xl">
-          <div className="overflow-hidden rounded-xl shadow-lg">
-            <img 
-              src={images.betting2} 
-              alt="Exchange platform features" 
-              className="w-full h-auto object-cover"
-            />
-          </div>
-        </div>
-      </section>
-
-      {/* Financial Operations Step Architecture Ledger (Deposit & Withdrawal) */}
-      <section className="py-16 sm:py-24 bg-[#fffdf9] border-b border-[#ebdcb9]">
-        <div className="container mx-auto px-4 sm:px-6 max-w-5xl">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-10 items-stretch">
-            
-            {/* Deposit System Column */}
-            <div className="bg-white border border-[#ebdcb9] rounded-xl p-6 sm:p-8 flex flex-col justify-between shadow-xs">
-              <div className="space-y-4">
-                <div className="inline-flex p-2.5 bg-green-50 text-green-700 rounded-lg border border-green-200"><ArrowDownLeft size={20} /></div>
-                <h3 className="font-serif text-2xl font-bold text-gray-900">Quick & Hassle-Free Deposits</h3>
-                <p className="text-sm text-gray-600 font-light leading-relaxed">
-                  After logging in, you are prompted to add funds to your account portfolio. Reddy Book Club makes this transaction process easy, quick and safe so users do not face technical processing blocks.
-                </p>
-                <div className="w-8 h-px bg-[#ebdcb9]"></div>
-                <ul className="space-y-2 text-xs font-medium text-gray-700">
-                  <li className="flex items-center gap-2">▪ <span className="font-bold">Instant Processing:</span> Balance matches immediately</li>
-                  <li className="flex items-center gap-2">▪ <span className="font-bold">Easy Payment Methods:</span> UPI, Bank, Wallets</li>
-                  <li className="flex items-center gap-2">▪ <span className="font-bold">Secure Transactions:</span> Fully cryptographically isolated</li>
-                  <li className="flex items-center gap-2">▪ <span className="font-bold">Real-Time Sync:</span> Automated dashboard balance balance</li>
-                </ul>
-              </div>
-              <p className="text-xs text-gray-400 font-light mt-6 italic">You are free to add funds at any time and begin utilizing the platform features.</p>
-            </div>
-
-            {/* Withdrawal System Column */}
-            <div className="bg-white border border-[#ebdcb9] rounded-xl p-6 sm:p-8 flex flex-col justify-between shadow-xs">
-              <div className="space-y-4">
-                <div className="inline-flex p-2.5 bg-blue-50 text-blue-700 rounded-lg border border-blue-200"><ArrowUpRight size={20} /></div>
-                <h3 className="font-serif text-2xl font-bold text-gray-900">Smooth & Reliable Withdrawals</h3>
-                <p className="text-sm text-gray-600 font-light leading-relaxed">
-                  Ease in the withdrawal of money is one of the most crucial attributes of any digital ledger. Reddy Book Club offers a withdrawal request routing system which is easy, reliable and safe.
-                </p>
-                <div className="w-8 h-px bg-[#ebdcb9]"></div>
-                <ul className="space-y-2 text-xs font-medium text-gray-700">
-                  <li className="flex items-center gap-2">▪ Easy request verification parameters</li>
-                  <li className="flex items-center gap-2">▪ Safe management of user finance pipelines</li>
-                  <li className="flex items-center gap-2">▪ Fast processing times via authorized agent nodes</li>
-                  <li className="flex items-center gap-2">▪ Continuous financial audit reporting</li>
-                </ul>
-              </div>
-              <p className="text-xs text-gray-400 font-light mt-6 italic">Once the reddybook login is made, users can request withdrawals with absolute confidence.</p>
-            </div>
-
-          </div>
-        </div>
-      </section>
-
-      {/* Structural Placement of ReddyBookFeatures */}
-      <section className="bg-[#faf6eb]">
-        <ReddyBookFeatures />
-      </section>
-
-      {/* Image 7 - Homepage Image 13 & 14 */}
-      <section className="py-12 bg-white border-b border-[#ebdcb9]">
-        <div className="container mx-auto px-4 sm:px-6 max-w-5xl">
-          <div className="overflow-hidden rounded-xl shadow-lg">
-            <img 
-              src={images.betting} 
-              alt="Complete betting platform" 
-              className="w-full h-auto object-cover"
-            />
-          </div>
-        </div>
-      </section>
-
-      {/* Tab-Switched Interactive Routing Terminal Area */}
-      <section id="terminal" className="py-16 sm:py-24 bg-[#fffdf9] border-t border-b border-[#ebdcb9]">
+      {/* Terminal Section */}
+      <section id="terminal" className="py-16 sm:py-20 bg-white border-b border-[#ebdcb9]">
         <div className="container mx-auto px-4 sm:px-6 text-center">
-          <span className="text-xs font-bold tracking-widest text-[#968059] uppercase block mb-2">Access Portal Hub</span>
-          <h2 className="text-3xl sm:text-4xl font-serif font-bold text-gray-900 mb-4">Reddybook Login – Fast, Secure & Reliable</h2>
-          <p className="text-sm text-gray-500 max-w-2xl mx-auto mb-8 font-light">The log-in procedure is designed to be fast and reliable. Users can authenticate within seconds and gain access to their accounts without unnecessary dashboard load delays.</p>
+          <h2 className="text-2xl sm:text-3xl font-serif font-bold text-gray-900 mb-4">Get Started with Reddy Book Club Now</h2>
+          <p className="text-gray-600 max-w-2xl mx-auto mb-8">All is meant to be quick, easy and efficient.</p>
 
           <div className="flex justify-center gap-3 mb-10 flex-wrap">
             {[
               { id: 'login', label: 'Reddybook Login', icon: <User size={15} /> },
               { id: 'apk', label: 'Reddy Book Club APK', icon: <Smartphone size={15} /> },
-              { id: 'platform', label: 'Reddybook Online Link', icon: <Globe size={15} /> }
+              { id: 'platform', label: 'Reddybook Online', icon: <Globe size={15} /> }
             ].map(tab => (
               <button
                 key={tab.id}
@@ -517,171 +452,103 @@ const ReddyBookClubPage = () => {
             ))}
           </div>
 
-          <div className="max-w-xl mx-auto bg-white border border-[#ebdcb9] rounded-xl p-6 sm:p-10 shadow-xl text-left">
+          <div className="max-w-xl mx-auto bg-[#faf6eb] border border-[#ebdcb9] rounded-xl p-6 sm:p-8 shadow-xl text-left">
             {activeTab === 'login' && (
               <div className="space-y-4">
-                <p className="text-xs text-gray-500 font-light mb-2">Always ensure that your login credentials are secure and not shared with others.</p>
+                <p className="text-sm text-gray-600">Login steps:</p>
                 <div>
-                  <label className="block text-xs font-bold uppercase tracking-wider text-gray-600 mb-1">Username or Account ID</label>
-                  <input type="text" placeholder="Enter your ID" className="w-full bg-[#faf6eb]/40 border border-[#ebdcb9] rounded px-4 py-2.5 text-gray-900 focus:outline-none focus:border-yellow-600 text-sm" />
+                  <label className="block text-xs font-bold uppercase text-gray-600 mb-1">Username or ID</label>
+                  <input type="text" placeholder="Enter your ID" className="w-full bg-white border border-[#ebdcb9] rounded px-4 py-2.5 text-gray-900 focus:outline-none focus:border-yellow-600" />
                 </div>
                 <div>
-                  <label className="block text-xs font-bold uppercase tracking-wider text-gray-600 mb-1">Account Passkey Password</label>
-                  <input type="password" placeholder="Password" className="w-full bg-[#faf6eb]/40 border border-[#ebdcb9] rounded px-4 py-2.5 text-gray-900 focus:outline-none focus:border-yellow-600 text-sm" />
+                  <label className="block text-xs font-bold uppercase text-gray-600 mb-1">Password</label>
+                  <input type="password" placeholder="Enter your password" className="w-full bg-white border border-[#ebdcb9] rounded px-4 py-2.5 text-gray-900 focus:outline-none focus:border-yellow-600" />
                 </div>
-                <button className="bg-gradient-to-b from-[#ffd726] to-[#e0a100] text-black font-extrabold w-full py-3 rounded-md border border-[#cca300] shadow-sm text-xs uppercase tracking-wider mt-2">
+                <button className="bg-gradient-to-b from-[#ffd726] to-[#e0a100] text-black font-extrabold w-full py-3 rounded-md border border-[#cca300] text-sm">
                   Complete Reddybook Login
                 </button>
-                <div className="pt-2 flex flex-col gap-1.5 text-xs text-gray-500 font-light">
-                  <span className="flex items-center gap-1.5">▪ Check account balance in real-time</span>
-                  <span className="flex items-center gap-1.5">▪ Seamless navigation through all features</span>
-                </div>
+                <p className="text-xs text-gray-500 text-center">Once logged in, users can check balance, add funds, withdraw money, and navigate easily.</p>
               </div>
             )}
             
             {activeTab === 'apk' && (
-              <div className="text-center space-y-4 py-2">
-                <Smartphone size={36} className="mx-auto text-[#968059]" />
-                <h3 className="text-lg font-serif font-bold text-gray-900">Easy Download & Installation</h3>
-                <p className="text-sm text-gray-500 font-light max-w-sm mx-auto">The apk file option is suitable for users who wish to access accounts using their smartphones. It enables fast installation without app store update delays.</p>
-                
-                <div className="bg-[#faf6eb] border border-[#ebdcb9] rounded-lg p-4 text-left max-w-md mx-auto my-3 text-xs space-y-1 text-gray-700 font-medium">
-                  <p className="font-bold text-[#968059] mb-1">Installation steps:</p>
-                  <p>1. Get the apk file of the reddy book club from a verified source.</p>
-                  <p>2. Complete the local installation file routine on your device.</p>
-                  <p>3. Open the app shell and complete your primary reddybook login.</p>
-                </div>
-
-                <button className="bg-gradient-to-b from-[#ffd726] to-[#e0a100] text-black font-extrabold px-6 py-2.5 rounded-md border border-[#cca300] shadow-sm text-xs uppercase tracking-wider">
+              <div className="text-center space-y-4">
+                <Smartphone size={40} className="mx-auto text-[#968059]" />
+                <h3 className="text-lg font-bold text-gray-900">Easy Download & Installation</h3>
+                <p className="text-sm text-gray-600">Get the apk of the reddy book club from a verified source and install it on your device.</p>
+                <button className="bg-gradient-to-b from-[#ffd726] to-[#e0a100] text-black font-extrabold px-6 py-2.5 rounded-md border border-[#cca300] text-sm w-full">
                   Download Latest Android APK File
                 </button>
+                <p className="text-xs text-gray-500">In a few minutes, you will be able to access your account fully.</p>
               </div>
             )}
             
             {activeTab === 'platform' && (
-              <div className="text-center space-y-4 py-2">
-                <Globe size={36} className="mx-auto text-[#968059]" />
-                <h3 className="text-lg font-serif font-bold text-gray-900">Reddybook Online – Access Without Download</h3>
-                <p className="text-sm text-gray-500 font-light max-w-sm mx-auto">You can also use reddybook online directly from any browser without having to install local storage application shells.</p>
-                
-                <div className="grid grid-cols-3 gap-2 py-2 text-center text-xs font-semibold text-[#7c6643]">
-                  <div className="p-2 border border-[#ebdcb9] bg-[#faf6eb]/50 rounded">No Installation</div>
-                  <div className="p-2 border border-[#ebdcb9] bg-[#faf6eb]/50 rounded">Works on All Devices</div>
-                  <div className="p-2 border border-[#ebdcb9] bg-[#faf6eb]/50 rounded">Complete Functionality</div>
-                </div>
-
-                <button className="bg-gradient-to-b from-[#ffd726] to-[#e0a100] text-black font-extrabold px-6 py-2.5 rounded-md border border-[#cca300] shadow-sm text-xs uppercase tracking-wider">
-                  Launch Web Browser Mirror Portal
+              <div className="text-center space-y-4">
+                <Globe size={40} className="mx-auto text-[#968059]" />
+                <h3 className="text-lg font-bold text-gray-900">Access Without Download</h3>
+                <p className="text-sm text-gray-600">Use reddybook online directly from any browser without installing an app.</p>
+                <button className="bg-gradient-to-b from-[#ffd726] to-[#e0a100] text-black font-extrabold px-6 py-2.5 rounded-md border border-[#cca300] text-sm w-full">
+                  Launch Web Browser Portal
                 </button>
+                <p className="text-xs text-gray-500">Works on all devices with complete functionality.</p>
               </div>
             )}
           </div>
         </div>
       </section>
 
-      {/* Consolidated Benefits Summary Matrix */}
-      <section className="py-16 sm:py-24 bg-white border-b border-[#ebdcb9]">
-        <div className="container mx-auto px-4 sm:px-6 max-w-4xl">
-          <div className="text-center max-w-xl mx-auto mb-12">
-            <h2 className="text-2xl sm:text-3xl font-serif font-bold text-gray-900">Why Choose Reddybook?</h2>
-            <p className="text-sm text-gray-500 mt-1 font-light">Choosing reddybook means choosing a platform that prioritizes ease, user experience, safety and performance.</p>
-          </div>
-
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-            {[
-              { title: "Authentication Secure", desc: "Quick and secure reddybook login framework." },
-              { title: "Flexible Shell", desc: "Easy installation setup via reddy book club apk package files." },
-              { title: "Fast Capital Loading", desc: "Hassle-free instant clearing transaction deposit system." },
-              { title: "Trustworthy Settlements", desc: "Reliable, safe and transparent user balance withdrawal process." },
-              { title: "Cross-Device Versatility", desc: "Accessible via synchronized responsive web mirrors and native apps." },
-              { title: "Robust Group Growth", desc: "Building a supportive digital community with reddy anna club networks." }
-            ].map((benefit, idx) => (
-              <div key={idx} className="p-5 border border-[#ebdcb9] bg-[#fffdf9] rounded-xl flex items-start gap-3 shadow-xs">
-                <ShieldCheck size={18} className="text-[#b38f46] shrink-0 mt-0.5" />
-                <div>
-                  <h4 className="font-serif font-bold text-gray-900 text-sm md:text-base">{benefit.title}</h4>
-                  <p className="text-xs md:text-sm text-gray-600 font-light mt-0.5">{benefit.desc}</p>
-                </div>
-              </div>
-            ))}
-          </div>
-
-          {/* Safety Best Practices Notice Block */}
-          <div className="mt-10 p-5 bg-[#faf6eb] border border-yellow-600/10 rounded-xl space-y-2 text-xs">
-            <h4 className="font-bold text-gray-900 uppercase tracking-wider flex items-center gap-1.5 text-amber-800">
-              ⚠️ Safety & Best Practices Protocol
-            </h4>
-            <p className="text-gray-600 font-light leading-relaxed">
-              In order to have a secure experience, consider the following technical safety tips: Only download the apk file of reddy book club from trusted and verified source mirrors. Your reddybook username and password details are strictly confidential—avoid sharing sensitive information or login details with others, and update the application shell regularly.
-            </p>
-          </div>
-        </div>
-      </section>
-
-      {/* Comprehensive 15 Accordion FAQ Matrix Grid */}
-      <section id="faq" className="py-16 sm:py-24 bg-[#faf6eb]">
+      {/* FAQ Section */}
+      <section id="faq" className="py-16 sm:py-20 bg-[#faf6eb]">
         <div className="container mx-auto px-4 sm:px-6 max-w-3xl">
-          
-          <div className="text-center max-w-xl mx-auto mb-12">
+          <div className="text-center mb-12">
             <HelpCircle size={28} className="mx-auto text-[#968059] mb-2" />
-            <h2 className="text-3xl font-serif font-bold text-gray-900">Frequently Asked Questions</h2>
-            <p className="text-sm text-gray-500 mt-1 font-light">Review comprehensive procedural facts regarding reddybook club architecture</p>
-            <div className="w-12 h-0.5 bg-[#ebdcb9] mx-auto mt-4"></div>
+            <h2 className="text-2xl sm:text-3xl font-serif font-bold text-gray-900">Frequently Asked Questions</h2>
+            <div className="w-12 h-0.5 bg-[#e0a100] mx-auto mt-4"></div>
           </div>
 
           <div className="space-y-3">
             {faqs.map((faq, idx) => (
-              <div key={idx} className="bg-white border border-[#ebdcb9] rounded-lg shadow-xs overflow-hidden transition-all duration-200">
+              <div key={idx} className="bg-white border border-[#ebdcb9] rounded-lg overflow-hidden">
                 <button
                   onClick={() => toggleFaq(idx)}
-                  className="w-full px-5 py-4 text-left font-serif font-bold text-sm sm:text-base text-gray-900 flex items-center justify-between gap-4 hover:bg-[#fffdf9]"
+                  className="w-full px-5 py-4 text-left font-semibold text-sm sm:text-base text-gray-900 flex items-center justify-between gap-4 hover:bg-[#fffdf9]"
                 >
                   <span className="flex items-start gap-2">
-                    <span className="text-[#b38f46] font-mono font-normal">FAQ {idx + 1}.</span>
+                    <span className="text-[#b38f46] font-mono">{idx + 1}.</span>
                     <span>{faq.q}</span>
                   </span>
-                  {openFaq === idx ? <ChevronUp size={16} className="text-gray-400 shrink-0" /> : <ChevronDown size={16} className="text-gray-400 shrink-0" />}
+                  {openFaq === idx ? <ChevronUp size={18} className="text-gray-400 shrink-0" /> : <ChevronDown size={18} className="text-gray-400 shrink-0" />}
                 </button>
-                
                 {openFaq === idx && (
-                  <div className="px-5 pb-5 pt-1 text-xs sm:text-sm text-gray-600 font-light border-t border-[#ebdcb9]/40 leading-relaxed bg-[#faf6eb]/20">
+                  <div className="px-5 pb-5 pt-1 text-sm text-gray-600 border-t border-[#ebdcb9]/40 leading-relaxed bg-[#faf6eb]/20">
                     {faq.a}
                   </div>
                 )}
               </div>
             ))}
           </div>
-
         </div>
       </section>
 
-      {/* Luxury Real Estate Brand Footer & Disclaimer */}
-      <footer className="bg-[#111111] text-gray-400 py-12 border-t-2 border-[#b38f46] text-xs">
+      {/* Footer */}
+      <footer className="bg-[#111111] text-gray-400 py-12 border-t-2 border-[#b38f46]">
         <div className="container mx-auto px-4 sm:px-6 max-w-4xl text-center space-y-6">
-          
-          <div className="bg-[#222222] text-[#ebd18b] inline-flex flex-col px-6 py-2.5 rounded shadow-md border border-yellow-600/10">
-            <span className="font-serif font-black text-xl tracking-tight leading-none">REDDY BOOK CLUB</span>
-            <span className="text-[8px] font-sans tracking-[0.25em] text-white/70 font-semibold mt-1.5 leading-none">OFFICIAL COMPREHENSIVE INFORMATION HUB • 2026</span>
+          <div className="bg-[#222222] text-[#ebd18b] inline-flex flex-col px-6 py-2.5 rounded shadow-md">
+            <span className="font-serif font-black text-xl tracking-tight">REDDY BOOK CLUB</span>
+            <span className="text-[8px] tracking-[0.25em] text-white/70 mt-1">OFFICIAL INFORMATION HUB • 2026</span>
           </div>
 
-          {/* Explicit Legal Disclaimer */}
-          <div className="p-4 bg-[#1a1a1a] rounded border border-neutral-800 text-left text-[11px] text-gray-500 space-y-1 font-light">
-            <p className="font-bold text-gray-400 uppercase tracking-wider mb-1">Disclaimer Clause Notice:</p>
-            <p>This provided operational breakdown text information is intended for educational, research and informational illustrative uses only. It is strongly advised that individual system users must execute extensive local due diligence prior to processing any verification parameters or downloading any APK execution packages. Users are expected to fully observe and correspond with local legal regulations when utilizing any digital online platform shell interface.</p>
+          <div className="p-4 bg-[#1a1a1a] rounded border border-neutral-800 text-left text-[11px] text-gray-500">
+            <p className="font-bold text-gray-400 uppercase mb-1">Disclaimer:</p>
+            <p>This information is informational only. It is advised that users must do due diligence prior to downloading any APK files and observe local regulations when using any online platform.</p>
           </div>
 
-          <p className="text-gray-500 font-light max-w-xl mx-auto leading-relaxed">
-            Reddy Book Club has gained massive popularity among individuals who prefer a reliable and convenient environment dashboard. Synchronized deployment across all web browser links and localized phone application binaries. 18+ Mandate Threshold. Gamble Responsibly.
-          </p>
-
-          <div className="w-12 h-px bg-neutral-800 mx-auto"></div>
+          <p className="text-gray-500 text-xs">Reddy Book Club has gained popularity among users who prefer a reliable and convenient platform. 18+ Mandate. Gamble Responsibly.</p>
           
-          <p className="text-gray-600 font-mono text-[10px] tracking-wide">
-            Ecosystem Registry Contact: support@reddybookclub.com | Encrypted Broker Proxy Active
-          </p>
+          <p className="text-gray-600 text-[10px]">support@reddybookclub.com</p>
         </div>
       </footer>
-
     </div>
   );
 };
